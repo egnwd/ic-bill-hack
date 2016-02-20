@@ -150,7 +150,7 @@
         if (j < start || j > end) {
             for (NSUInteger i = 0; i < inputWidth; i++) {
                 UInt32 * currentPixel = inputPixels + (j * inputWidth) + i;
-                *currentPixel = RGBAMake(255, 255, 255, 255);
+                *currentPixel = RGBAMake(0, 0, 0, 255);
             }
         }
     }
