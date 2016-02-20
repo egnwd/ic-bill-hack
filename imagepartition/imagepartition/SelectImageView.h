@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol SelectImageViewDelegate;
+
 @interface SelectImageView : UIImageView
-@property (readonly, nonatomic) CGRect selection;
+@property (nonatomic, weak) id<SelectImageViewDelegate> delegate;
+@end
+
+@protocol SelectImageViewDelegate <NSObject>
+- (void)selectionWasMade:(CGRect)selection;
 @end

@@ -59,6 +59,15 @@
                             (maxX + 2*PADDING - minX) * scale,
                             (maxY + 2*PADDING - minY) * scale);
     
+    id<SelectImageViewDelegate> strongDelegate = self.delegate;
+    
+    // Our delegate method is optional, so we should
+    // check that the delegate implements it
+    if ([strongDelegate respondsToSelector:@selector(selectionWasMade:)]) {
+        [strongDelegate selectionWasMade:_selection];
+//        NSLog(@"Call delegate");
+    }
+    
     NSLog(@"%@", [NSValue valueWithCGRect:_selection]);
 }
 
@@ -81,9 +90,9 @@
     // Add the starting point to the set of points
     [self handleTouches:touches];
     
-    NSLog(@"Touches began");
-    CGPoint position = [((UITouch *)touches.anyObject) preciseLocationInView:self];
-    NSLog(@"%f %f", position.x, position.y);
+//    NSLog(@"Touches began");
+//    CGPoint position = [((UITouch *)touches.anyObject) preciseLocationInView:self];
+//    NSLog(@"%f %f", position.x, position.y);
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {

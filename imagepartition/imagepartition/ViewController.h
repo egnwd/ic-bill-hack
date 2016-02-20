@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SelectImageView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <SelectImageViewDelegate>
 
 
 @end
