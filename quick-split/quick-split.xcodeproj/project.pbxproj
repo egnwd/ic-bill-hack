@@ -1,0 +1,531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05CCD6A21C789B20001B5893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6A11C789B20001B5893 /* AppDelegate.swift */; };
+		05CCD6A51C789B20001B5893 /* quick_split.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6A31C789B20001B5893 /* quick_split.xcdatamodeld */; };
+		05CCD6A71C789B20001B5893 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6A61C789B20001B5893 /* MasterViewController.swift */; };
+		05CCD6A91C789B20001B5893 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6A81C789B20001B5893 /* DetailViewController.swift */; };
+		05CCD6AC1C789B20001B5893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CCD6AA1C789B20001B5893 /* Main.storyboard */; };
+		05CCD6AE1C789B20001B5893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CCD6AD1C789B20001B5893 /* Assets.xcassets */; };
+		05CCD6B11C789B20001B5893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CCD6AF1C789B20001B5893 /* LaunchScreen.storyboard */; };
+		05CCD6BC1C789B20001B5893 /* quick_splitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6BB1C789B20001B5893 /* quick_splitTests.swift */; };
+		05CCD6C71C789B20001B5893 /* quick_splitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6C61C789B20001B5893 /* quick_splitUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		05CCD6B81C789B20001B5893 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05CCD6961C789B20001B5893 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05CCD69D1C789B20001B5893;
+			remoteInfo = "quick-split";
+		};
+		05CCD6C31C789B20001B5893 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 05CCD6961C789B20001B5893 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 05CCD69D1C789B20001B5893;
+			remoteInfo = "quick-split";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05CCD69E1C789B20001B5893 /* quick-split.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quick-split.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05CCD6A11C789B20001B5893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		05CCD6A41C789B20001B5893 /* quick_split.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = quick_split.xcdatamodel; sourceTree = "<group>"; };
+		05CCD6A61C789B20001B5893 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		05CCD6A81C789B20001B5893 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		05CCD6AB1C789B20001B5893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		05CCD6AD1C789B20001B5893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05CCD6B01C789B20001B5893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		05CCD6B21C789B20001B5893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05CCD6B71C789B20001B5893 /* quick-splitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "quick-splitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05CCD6BB1C789B20001B5893 /* quick_splitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quick_splitTests.swift; sourceTree = "<group>"; };
+		05CCD6BD1C789B20001B5893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05CCD6C21C789B20001B5893 /* quick-splitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "quick-splitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05CCD6C61C789B20001B5893 /* quick_splitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quick_splitUITests.swift; sourceTree = "<group>"; };
+		05CCD6C81C789B20001B5893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		05CCD69B1C789B20001B5893 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05CCD6B41C789B20001B5893 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05CCD6BF1C789B20001B5893 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05CCD6951C789B20001B5893 = {
+			isa = PBXGroup;
+			children = (
+				05CCD6A01C789B20001B5893 /* quick-split */,
+				05CCD6BA1C789B20001B5893 /* quick-splitTests */,
+				05CCD6C51C789B20001B5893 /* quick-splitUITests */,
+				05CCD69F1C789B20001B5893 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		05CCD69F1C789B20001B5893 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05CCD69E1C789B20001B5893 /* quick-split.app */,
+				05CCD6B71C789B20001B5893 /* quick-splitTests.xctest */,
+				05CCD6C21C789B20001B5893 /* quick-splitUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05CCD6A01C789B20001B5893 /* quick-split */ = {
+			isa = PBXGroup;
+			children = (
+				05CCD6A11C789B20001B5893 /* AppDelegate.swift */,
+				05CCD6A61C789B20001B5893 /* MasterViewController.swift */,
+				05CCD6A81C789B20001B5893 /* DetailViewController.swift */,
+				05CCD6AA1C789B20001B5893 /* Main.storyboard */,
+				05CCD6AD1C789B20001B5893 /* Assets.xcassets */,
+				05CCD6AF1C789B20001B5893 /* LaunchScreen.storyboard */,
+				05CCD6B21C789B20001B5893 /* Info.plist */,
+				05CCD6A31C789B20001B5893 /* quick_split.xcdatamodeld */,
+			);
+			path = "quick-split";
+			sourceTree = "<group>";
+		};
+		05CCD6BA1C789B20001B5893 /* quick-splitTests */ = {
+			isa = PBXGroup;
+			children = (
+				05CCD6BB1C789B20001B5893 /* quick_splitTests.swift */,
+				05CCD6BD1C789B20001B5893 /* Info.plist */,
+			);
+			path = "quick-splitTests";
+			sourceTree = "<group>";
+		};
+		05CCD6C51C789B20001B5893 /* quick-splitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				05CCD6C61C789B20001B5893 /* quick_splitUITests.swift */,
+				05CCD6C81C789B20001B5893 /* Info.plist */,
+			);
+			path = "quick-splitUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05CCD69D1C789B20001B5893 /* quick-split */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05CCD6CB1C789B20001B5893 /* Build configuration list for PBXNativeTarget "quick-split" */;
+			buildPhases = (
+				05CCD69A1C789B20001B5893 /* Sources */,
+				05CCD69B1C789B20001B5893 /* Frameworks */,
+				05CCD69C1C789B20001B5893 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "quick-split";
+			productName = "quick-split";
+			productReference = 05CCD69E1C789B20001B5893 /* quick-split.app */;
+			productType = "com.apple.product-type.application";
+		};
+		05CCD6B61C789B20001B5893 /* quick-splitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05CCD6CE1C789B20001B5893 /* Build configuration list for PBXNativeTarget "quick-splitTests" */;
+			buildPhases = (
+				05CCD6B31C789B20001B5893 /* Sources */,
+				05CCD6B41C789B20001B5893 /* Frameworks */,
+				05CCD6B51C789B20001B5893 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05CCD6B91C789B20001B5893 /* PBXTargetDependency */,
+			);
+			name = "quick-splitTests";
+			productName = "quick-splitTests";
+			productReference = 05CCD6B71C789B20001B5893 /* quick-splitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		05CCD6C11C789B20001B5893 /* quick-splitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 05CCD6D11C789B20001B5893 /* Build configuration list for PBXNativeTarget "quick-splitUITests" */;
+			buildPhases = (
+				05CCD6BE1C789B20001B5893 /* Sources */,
+				05CCD6BF1C789B20001B5893 /* Frameworks */,
+				05CCD6C01C789B20001B5893 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				05CCD6C41C789B20001B5893 /* PBXTargetDependency */,
+			);
+			name = "quick-splitUITests";
+			productName = "quick-splitUITests";
+			productReference = 05CCD6C21C789B20001B5893 /* quick-splitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		05CCD6961C789B20001B5893 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "stealth-phoenix";
+				TargetAttributes = {
+					05CCD69D1C789B20001B5893 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = JBX4SAA6M5;
+					};
+					05CCD6B61C789B20001B5893 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = JBX4SAA6M5;
+						TestTargetID = 05CCD69D1C789B20001B5893;
+					};
+					05CCD6C11C789B20001B5893 = {
+						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = JBX4SAA6M5;
+						TestTargetID = 05CCD69D1C789B20001B5893;
+					};
+				};
+			};
+			buildConfigurationList = 05CCD6991C789B20001B5893 /* Build configuration list for PBXProject "quick-split" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 05CCD6951C789B20001B5893;
+			productRefGroup = 05CCD69F1C789B20001B5893 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05CCD69D1C789B20001B5893 /* quick-split */,
+				05CCD6B61C789B20001B5893 /* quick-splitTests */,
+				05CCD6C11C789B20001B5893 /* quick-splitUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05CCD69C1C789B20001B5893 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05CCD6B11C789B20001B5893 /* LaunchScreen.storyboard in Resources */,
+				05CCD6AE1C789B20001B5893 /* Assets.xcassets in Resources */,
+				05CCD6AC1C789B20001B5893 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05CCD6B51C789B20001B5893 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05CCD6C01C789B20001B5893 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		05CCD69A1C789B20001B5893 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05CCD6A51C789B20001B5893 /* quick_split.xcdatamodeld in Sources */,
+				05CCD6A21C789B20001B5893 /* AppDelegate.swift in Sources */,
+				05CCD6A71C789B20001B5893 /* MasterViewController.swift in Sources */,
+				05CCD6A91C789B20001B5893 /* DetailViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05CCD6B31C789B20001B5893 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05CCD6BC1C789B20001B5893 /* quick_splitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05CCD6BE1C789B20001B5893 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05CCD6C71C789B20001B5893 /* quick_splitUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		05CCD6B91C789B20001B5893 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05CCD69D1C789B20001B5893 /* quick-split */;
+			targetProxy = 05CCD6B81C789B20001B5893 /* PBXContainerItemProxy */;
+		};
+		05CCD6C41C789B20001B5893 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 05CCD69D1C789B20001B5893 /* quick-split */;
+			targetProxy = 05CCD6C31C789B20001B5893 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		05CCD6AA1C789B20001B5893 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05CCD6AB1C789B20001B5893 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		05CCD6AF1C789B20001B5893 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				05CCD6B01C789B20001B5893 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		05CCD6C91C789B20001B5893 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		05CCD6CA1C789B20001B5893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		05CCD6CC1C789B20001B5893 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "quick-split/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stealth-phoenix.quick-split";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		05CCD6CD1C789B20001B5893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "quick-split/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stealth-phoenix.quick-split";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		05CCD6CF1C789B20001B5893 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "quick-splitTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stealth-phoenix.quick-splitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/quick-split.app/quick-split";
+			};
+			name = Debug;
+		};
+		05CCD6D01C789B20001B5893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "quick-splitTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stealth-phoenix.quick-splitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/quick-split.app/quick-split";
+			};
+			name = Release;
+		};
+		05CCD6D21C789B20001B5893 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "quick-splitUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stealth-phoenix.quick-splitUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "quick-split";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		05CCD6D31C789B20001B5893 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "quick-splitUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "stealth-phoenix.quick-splitUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "quick-split";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		05CCD6991C789B20001B5893 /* Build configuration list for PBXProject "quick-split" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05CCD6C91C789B20001B5893 /* Debug */,
+				05CCD6CA1C789B20001B5893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		05CCD6CB1C789B20001B5893 /* Build configuration list for PBXNativeTarget "quick-split" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05CCD6CC1C789B20001B5893 /* Debug */,
+				05CCD6CD1C789B20001B5893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		05CCD6CE1C789B20001B5893 /* Build configuration list for PBXNativeTarget "quick-splitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05CCD6CF1C789B20001B5893 /* Debug */,
+				05CCD6D01C789B20001B5893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		05CCD6D11C789B20001B5893 /* Build configuration list for PBXNativeTarget "quick-splitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05CCD6D21C789B20001B5893 /* Debug */,
+				05CCD6D31C789B20001B5893 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		05CCD6A31C789B20001B5893 /* quick_split.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				05CCD6A41C789B20001B5893 /* quick_split.xcdatamodel */,
+			);
+			currentVersion = 05CCD6A41C789B20001B5893 /* quick_split.xcdatamodel */;
+			path = quick_split.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 05CCD6961C789B20001B5893 /* Project object */;
+}
