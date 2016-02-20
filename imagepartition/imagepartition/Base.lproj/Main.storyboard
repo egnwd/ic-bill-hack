@@ -32,15 +32,25 @@
                                     <constraint firstAttribute="height" constant="100" id="ula-AB-26o"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rD-vl-IcT">
+                                <rect key="frame" x="20" y="436" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="SY8-RX-08d" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="DaZ-WP-r5m"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SY8-RX-08d" secondAttribute="bottom" constant="20" id="Dhf-Io-spy"/>
+                            <constraint firstItem="SY8-RX-08d" firstAttribute="top" secondItem="9rD-vl-IcT" secondAttribute="bottom" constant="23" id="YWG-3P-JpK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Unu-vP-0x5" secondAttribute="trailing" constant="114.5" id="ZfG-Wh-JqX"/>
+                            <constraint firstItem="9rD-vl-IcT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cbF-3m-HJN"/>
+                            <constraint firstItem="9rD-vl-IcT" firstAttribute="top" secondItem="Unu-vP-0x5" secondAttribute="bottom" constant="19" id="dUP-Ac-qGZ"/>
                             <constraint firstItem="Unu-vP-0x5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="gQa-aY-vfF"/>
                             <constraint firstItem="Unu-vP-0x5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jUu-vj-yHx"/>
                             <constraint firstItem="SY8-RX-08d" firstAttribute="top" secondItem="Unu-vP-0x5" secondAttribute="bottom" constant="63" id="nTR-7E-3Py"/>
+                            <constraint firstItem="9rD-vl-IcT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rUE-2W-5tv"/>
                             <constraint firstItem="SY8-RX-08d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rUk-u4-TTU"/>
                         </constraints>
                         <variation key="default">
@@ -52,6 +62,7 @@
                     <connections>
                         <outlet property="imageView" destination="Unu-vP-0x5" id="QeX-en-95c"/>
                         <outlet property="partitionImageView" destination="SY8-RX-08d" id="YP2-u1-Hag"/>
+                        <outlet property="priceLabel" destination="9rD-vl-IcT" id="ABF-6b-PX2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

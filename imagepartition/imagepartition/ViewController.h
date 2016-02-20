@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SelectImageView.h"
+#import <MicroBlink/MicroBlink.h>
 
 @interface ViewController : UIViewController <SelectImageViewDelegate>
 

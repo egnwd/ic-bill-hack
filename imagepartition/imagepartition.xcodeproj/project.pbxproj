@@ -16,9 +16,12 @@
 		97D533B41C78A24C00E9DA8E /* sainsbury.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97D533B31C78A24C00E9DA8E /* sainsbury.jpg */; };
 		97D533B61C78A36800E9DA8E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D533B51C78A36800E9DA8E /* CoreGraphics.framework */; };
 		97D533B91C78C6B800E9DA8E /* SelectImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D533B81C78C6B800E9DA8E /* SelectImageView.m */; };
+		97D533DB1C78F6EB00E9DA8E /* sainsbury_adj.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97D533DA1C78F6EB00E9DA8E /* sainsbury_adj.jpg */; };
+		B757BDED1916F687E7EA2262 /* libPods-imagepartition.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FCFCDBA2D96F8C0D9A00F25 /* libPods-imagepartition.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5FCFCDBA2D96F8C0D9A00F25 /* libPods-imagepartition.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-imagepartition.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D533971C789EF900E9DA8E /* imagepartition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = imagepartition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97D5339B1C789EF900E9DA8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		97D5339D1C789EF900E9DA8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -33,6 +36,9 @@
 		97D533B51C78A36800E9DA8E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		97D533B71C78C6B800E9DA8E /* SelectImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectImageView.h; sourceTree = "<group>"; };
 		97D533B81C78C6B800E9DA8E /* SelectImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectImageView.m; sourceTree = "<group>"; };
+		97D533DA1C78F6EB00E9DA8E /* sainsbury_adj.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sainsbury_adj.jpg; sourceTree = "<group>"; };
+		98528FDFA89BF57F33001974 /* Pods-imagepartition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagepartition.debug.xcconfig"; path = "Pods/Target Support Files/Pods-imagepartition/Pods-imagepartition.debug.xcconfig"; sourceTree = "<group>"; };
+		FA2E1D52EB8A8DB393CCBE4E /* Pods-imagepartition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-imagepartition.release.xcconfig"; path = "Pods/Target Support Files/Pods-imagepartition/Pods-imagepartition.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97D533B61C78A36800E9DA8E /* CoreGraphics.framework in Frameworks */,
+				B757BDED1916F687E7EA2262 /* libPods-imagepartition.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +60,8 @@
 				97D533B51C78A36800E9DA8E /* CoreGraphics.framework */,
 				97D533991C789EF900E9DA8E /* imagepartition */,
 				97D533981C789EF900E9DA8E /* Products */,
+				ED46DB32CB040CC5B69B9EE6 /* Pods */,
+				F8D36D7BB44D741D31189EF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +83,7 @@
 				97D533B71C78C6B800E9DA8E /* SelectImageView.h */,
 				97D533B81C78C6B800E9DA8E /* SelectImageView.m */,
 				97D533B31C78A24C00E9DA8E /* sainsbury.jpg */,
+				97D533DA1C78F6EB00E9DA8E /* sainsbury_adj.jpg */,
 				97D533A31C789EF900E9DA8E /* Main.storyboard */,
 				97D533A61C789EF900E9DA8E /* Assets.xcassets */,
 				97D533A81C789EF900E9DA8E /* LaunchScreen.storyboard */,
@@ -91,6 +101,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		ED46DB32CB040CC5B69B9EE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				98528FDFA89BF57F33001974 /* Pods-imagepartition.debug.xcconfig */,
+				FA2E1D52EB8A8DB393CCBE4E /* Pods-imagepartition.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F8D36D7BB44D741D31189EF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5FCFCDBA2D96F8C0D9A00F25 /* libPods-imagepartition.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 97D533AE1C789EF900E9DA8E /* Build configuration list for PBXNativeTarget "imagepartition" */;
 			buildPhases = (
+				E26FA5F01CC2D53FA83C6470 /* Check Pods Manifest.lock */,
 				97D533931C789EF900E9DA8E /* Sources */,
 				97D533941C789EF900E9DA8E /* Frameworks */,
 				97D533951C789EF900E9DA8E /* Resources */,
+				A06A20152CF5679A7B9166BE /* Embed Pods Frameworks */,
+				6E17DD769ABBE5B10D75A51C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,10 +182,59 @@
 				97D533A71C789EF900E9DA8E /* Assets.xcassets in Resources */,
 				97D533B41C78A24C00E9DA8E /* sainsbury.jpg in Resources */,
 				97D533A51C789EF900E9DA8E /* Main.storyboard in Resources */,
+				97D533DB1C78F6EB00E9DA8E /* sainsbury_adj.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E17DD769ABBE5B10D75A51C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imagepartition/Pods-imagepartition-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A06A20152CF5679A7B9166BE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-imagepartition/Pods-imagepartition-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E26FA5F01CC2D53FA83C6470 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		97D533931C789EF900E9DA8E /* Sources */ = {
@@ -273,22 +352,24 @@
 		};
 		97D533AF1C789EF900E9DA8E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98528FDFA89BF57F33001974 /* Pods-imagepartition.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = imagepartition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jonathanlking.imagepartition;
+				PRODUCT_BUNDLE_IDENTIFIER = "stealth-phoenix.quick-split";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		97D533B01C789EF900E9DA8E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA2E1D52EB8A8DB393CCBE4E /* Pods-imagepartition.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = imagepartition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jonathanlking.imagepartition;
+				PRODUCT_BUNDLE_IDENTIFIER = "stealth-phoenix.quick-split";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -1,0 +1,6 @@
+platform :ios, '8.0'
+
+target 'imagepartition' do
+  pod 'PPBlinkOCR', '~> 1.1.1'
+  pod 'TesseractOCRiOS', :git => 'https://github.com/gali8/Tesseract-OCR-iOS.git'
+end
