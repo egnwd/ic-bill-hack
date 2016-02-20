@@ -145,6 +145,17 @@
         NSLog(@"%d", emptyRow[i]);
     }
     
+    for (NSUInteger j = 0; j < inputHeight; j++) {
+        
+        if (j < start || j > end) {
+            for (NSUInteger i = 0; i < inputWidth; i++) {
+                UInt32 * currentPixel = inputPixels + (j * inputWidth) + i;
+                *currentPixel = RGBAMake(255, 255, 255, 255);
+            }
+        }
+    }
+    
+    
     NSLog(@"Max of length: %d, between (%d, %d)", end - start, start, end);
     
     // 4. Create a new UIImage
