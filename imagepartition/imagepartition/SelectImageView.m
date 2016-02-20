@@ -8,6 +8,7 @@
 
 #import "SelectImageView.h"
 
+// TODO: add padding to the delegate
 #define PADDING 5 // Padding of 5 pts either side
 
 @interface SelectImageView()
@@ -54,10 +55,29 @@
     
     // Scale the points, so it gives pixel data
     float scale =  self.image.size.width / self.frame.size.width;
-    _selection = CGRectMake(MAX((minX - PADDING), 0),
-                            MAX((minY - PADDING), 0),
-                            (maxX + 2*PADDING - minX) * scale,
-                            (maxY + 2*PADDING - minY) * scale);
+    
+    // Add padding
+    minX += PADDING;
+    maxX += PADDING;
+    minY += PADDING;
+    maxY += PADDING;
+    
+    // Scale the coordinates
+    minX *= scale;
+    maxX *= scale;
+    minY *= scale;
+    maxY *= scale;
+    
+    // Bound the coordinates to the image
+    minX = MAX(minX, 0);
+    minY = MAX(minY, 0);
+    maxX = MIN(maxX, self.image.size.width);
+    maxY = MIN(maxY, self.image.size.height);
+    
+    _selection = CGRectMake(minX,
+                            minY,
+                            maxX - minX,
+                            maxY - minY);
     
     id<SelectImageViewDelegate> strongDelegate = self.delegate;
     
@@ -68,7 +88,8 @@
 //        NSLog(@"Call delegate");
     }
     
-    NSLog(@"%@", [NSValue valueWithCGRect:_selection]);
+    NSLog(@"(%f, %f) , (%f, %f)", minX, minY, maxX, maxY);
+//    NSLog(@"%@", [NSValue valueWithCGRect:_selection]);
 }
 
 

@@ -11,6 +11,7 @@
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *partitionImageView;
 @property (weak, nonatomic) IBOutlet SelectImageView *imageView;
+@property (strong, nonatomic) UIImage *image;
 @end
 
 @implementation ViewController
@@ -22,14 +23,16 @@
     // Set the delegate for the SelectImageView
     _imageView.delegate = self;
     
-    UIImage *image = [UIImage imageNamed:@"sainsbury.jpg"];
-    NSLog(@"%@", image);
-    _imageView.image = image;
+    // initialise the image
+    _image = [UIImage imageNamed:@"sainsbury.jpg"];
+    
+    NSLog(@"%@", _image);
+    _imageView.image = _image;
     _imageView.contentMode = UIViewContentModeScaleAspectFit;
     
     // Partition the image
     CGRect cropRect = CGRectMake(900, 800, 400, 100);
-    CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], cropRect);
+    CGImageRef imageRef = CGImageCreateWithImageInRect([_image CGImage], cropRect);
     UIImage *partitionImage = [UIImage imageWithCGImage:imageRef];
     CGImageRelease(imageRef);
     
@@ -47,10 +50,22 @@
 - (void)selectionWasMade:(CGRect)selection {
     NSLog(@"Delegate callback");
     
-//    UIImage *partitionImage = [UIImage imageWithCGImage:imageRef];
-//    CGImageRelease(imageRef);
-//    
-//    _partitionImageView.image = partitionImage;
+    // Convert to CG coordinate system
+
+    CGAffineTransform transform = CGAffineTransformMakeScale(1, -1);
+    transform = CGAffineTransformTranslate(transform,
+                                           0, -_imageView.image.size.height);
+    
+    CGRect newRectForUIKit = CGRectApplyAffineTransform(selection, transform);
+    
+//    NSLog(@"%@", [NSValue valueWithCGRect:newRectForUIKit]);
+    
+    
+    
+    CGImageRef imageRef = CGImageCreateWithImageInRect([_image CGImage], newRectForUIKit);
+    UIImage *partitionImage = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    _partitionImageView.image = partitionImage;
 }
 
 
