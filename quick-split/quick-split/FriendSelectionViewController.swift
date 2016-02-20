@@ -10,8 +10,11 @@ import UIKit
 
 class FriendSelectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
   
-  var friends: [Friend] = []
   @IBOutlet var friendCollectionView: UICollectionView!
+  @IBOutlet var instructions: UILabel!
+  @IBOutlet var nextButton: UIButton!
+  
+  var friends: [Friend] = []
   var colours: [UIColor] = []
   var selectedFriends: [Friend] = []
   
@@ -34,15 +37,19 @@ class FriendSelectionViewController: UIViewController, UICollectionViewDataSourc
   }
     
 
-  /*
+  
   // MARK: - Navigation
+  
+  @IBAction func goToPriceAllocation() {
+    
+  }
 
   // In a storyboard-based application, you will often want to do a little preparation before navigation
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     // Get the new view controller using segue.destinationViewController.
     // Pass the selected object to the new view controller.
   }
-  */
+
   
   // MARK: - Collection
   
@@ -59,22 +66,20 @@ class FriendSelectionViewController: UIViewController, UICollectionViewDataSourc
   func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
     let cell = friendCollectionView.cellForItemAtIndexPath(indexPath) as! FriendCollectionViewCell
     if (cell.isChosen) {
-      if let friend = cell.friend {
-        colours.append(friend.colour!)
-        let defaultColour = UIColor.whiteColor()
-        cell.backgroundColor = defaultColour
-        friend.colour = defaultColour
-      }
+      colours.append(cell.friend!.colour!)
+      cell.unhighlightCell()
+      selectedFriends.removeAtIndex(selectedFriends.indexOf({$0 === cell.friend!})!)
     } else {
       if (colours.count == 0) { return }
       let colour = colours.popLast()
-      cell.backgroundColor = colour
-      if let friend = cell.friend {
-        friend.colour = colour
-        selectedFriends.append(friend);
-      }
+      cell.highlightCell(withColour: colour!)
+      selectedFriends.append(cell.friend!);
     }
-     cell.isChosen = !cell.isChosen
+    cell.isChosen = !cell.isChosen
+    
+    let canProceed = selectedFriends.count >= 1
+    nextButton.hidden = !canProceed
+    instructions.hidden = canProceed
   }
   
 }

@@ -43,7 +43,7 @@
                                     <outlet property="delegate" destination="pLu-eF-Q9p" id="gVn-sk-OSj"/>
                                 </connections>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Useful Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPc-KX-FSm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select the friends you wish to split the bill with. (Maximum: 5 friends)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPc-KX-FSm">
                                 <rect key="frame" x="20" y="536" width="560" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="P9f-5l-ejr"/>
@@ -58,6 +58,16 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGm-Sx-YKI">
+                                <rect key="frame" x="20" y="536" width="560" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="pgA-Yq-xux"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="goToPriceAllocation" destination="pLu-eF-Q9p" eventType="touchUpInside" id="cxi-mo-ZXR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -65,11 +75,13 @@
                             <constraint firstItem="tPc-KX-FSm" firstAttribute="trailing" secondItem="ehR-Y7-UO6" secondAttribute="trailing" id="5FT-wC-fF4"/>
                             <constraint firstItem="tPc-KX-FSm" firstAttribute="top" secondItem="ehR-Y7-UO6" secondAttribute="bottom" constant="20" id="AXF-jX-gil"/>
                             <constraint firstItem="rfi-w1-1PM" firstAttribute="top" secondItem="ehR-Y7-UO6" secondAttribute="bottom" constant="80" id="MSt-CO-MeV"/>
+                            <constraint firstItem="aGm-Sx-YKI" firstAttribute="top" secondItem="ehR-Y7-UO6" secondAttribute="bottom" constant="20" id="MuQ-Br-vyA"/>
                             <constraint firstItem="ehR-Y7-UO6" firstAttribute="centerX" secondItem="P6c-pd-rOX" secondAttribute="centerX" id="PO5-Mk-P8I"/>
                             <constraint firstItem="ehR-Y7-UO6" firstAttribute="top" secondItem="aWa-GL-DVi" secondAttribute="bottom" id="RCg-Qx-Uqi"/>
                             <constraint firstItem="rfi-w1-1PM" firstAttribute="top" secondItem="tPc-KX-FSm" secondAttribute="bottom" id="THb-el-Z2c"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ehR-Y7-UO6" secondAttribute="trailing" id="iAB-Kz-1zZ"/>
                             <constraint firstItem="tPc-KX-FSm" firstAttribute="leading" secondItem="ehR-Y7-UO6" secondAttribute="leading" id="iBI-Ne-EZa"/>
+                            <constraint firstItem="aGm-Sx-YKI" firstAttribute="centerX" secondItem="P6c-pd-rOX" secondAttribute="centerX" id="v8t-zF-x7Q"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -80,6 +92,8 @@
                     <navigationItem key="navigationItem" id="Z5z-0s-Rew"/>
                     <connections>
                         <outlet property="friendCollectionView" destination="ehR-Y7-UO6" id="v2Z-za-hel"/>
+                        <outlet property="instructions" destination="tPc-KX-FSm" id="MuU-Xb-gcd"/>
+                        <outlet property="nextButton" destination="aGm-Sx-YKI" id="ty3-Cv-1aR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWA-hk-SLx" userLabel="First Responder" sceneMemberID="firstResponder"/>

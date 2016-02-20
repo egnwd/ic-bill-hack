@@ -10,6 +10,7 @@ import UIKit
 
 class FriendCollectionViewCell: UICollectionViewCell {
   let cellSize = CGSize(width: 75, height: 82)
+  let defaultColour = UIColor.whiteColor()
 
   var name: UILabel = UILabel()
   var avatar: UIImageView = UIImageView()
@@ -35,4 +36,13 @@ class FriendCollectionViewCell: UICollectionViewCell {
     self.addSubview(name)
   }
   
+  func highlightCell(withColour colour: UIColor) {
+    self.backgroundColor = colour
+    friend!.colour = colour
+  }
+  
+  func unhighlightCell() {
+    self.backgroundColor = defaultColour
+    friend!.colour = defaultColour
+  }
 }
