@@ -191,6 +191,7 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bRt-wL-Kbz" firstAttribute="centerX" secondItem="SVU-87-LV0" secondAttribute="centerX" id="2Lv-Rx-zHl"/>
                             <constraint firstItem="Fhp-75-iGP" firstAttribute="leading" secondItem="hYQ-JL-SF9" secondAttribute="leading" id="5nQ-ON-1Yr"/>
@@ -215,6 +216,9 @@
                                 <exclude reference="Csv-Tj-GHC"/>
                             </mask>
                         </variation>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="3tx-Ld-dBw" appends="YES" id="SdC-po-FOC"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="friendCollectionView" destination="bRt-wL-Kbz" id="JrP-xt-dSf"/>
@@ -224,6 +228,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CFL-7i-dAc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="3tx-Ld-dBw">
+                    <connections>
+                        <action selector="longPressed:" destination="8ka-uG-won" id="wEI-Wp-MgT"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="366" y="-639"/>
         </scene>

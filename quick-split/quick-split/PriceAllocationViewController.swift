@@ -56,8 +56,13 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
     if let old_friend = selectedFriend {
       old_friend.deselectCell()
     }
-    selectedFriend = friendCollectionView.cellForItemAtIndexPath(indexPath) as? FriendTotalCollectionViewCell
-    selectedFriend!.selectCell()
+    let cell = friendCollectionView.cellForItemAtIndexPath(indexPath) as? FriendTotalCollectionViewCell
+    if (cell !== selectedFriend) {
+      selectedFriend = cell!
+      selectedFriend!.selectCell()
+    } else {
+      selectedFriend = nil
+    }
   }
   
   // MARK: - Table View
@@ -91,5 +96,19 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
       NSCharacterSet.decimalDigitCharacterSet().invertedSet)
     let newString = stringArray.joinWithSeparator("")
     return Int(newString)!
+  }
+  
+  @IBAction func longPressed(sender: UILongPressGestureRecognizer)
+  {
+    let touchLoc = sender.locationInView(pricesTable)
+    if let indexPath = pricesTable.indexPathForRowAtPoint(touchLoc) {
+      let cell = pricesTable.cellForRowAtIndexPath(indexPath)
+      cell?.backgroundColor = UIColor.whiteColor()
+      let price = getPrice((cell?.textLabel!.text!)!)
+      if let friend = dummyPrices[price] {
+        friend?.total -= price
+      }
+      dummyPrices.removeValueForKey(price)
+    }
   }
 }

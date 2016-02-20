@@ -55,10 +55,12 @@ class FriendTotalCollectionViewCell: UICollectionViewCell {
   
   func selectCell() {
     self.totalLabel.textColor = UIColor.whiteColor()
+    self.isChosen = true
   }
   
   func deselectCell() {
     self.totalLabel.textColor = UIColor.blackColor()
+    self.isChosen = false
   }
   
   private func priceFormat(price: Int) -> String {
