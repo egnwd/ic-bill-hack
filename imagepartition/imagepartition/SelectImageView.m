@@ -10,10 +10,9 @@
 
 // TODO: add padding to the delegate
 #define HORIZONTAL_PADDING 5 // Padding of 5 pts either side
-#define VERTICAL_PADDING 9 // Padding of 5 pts either side
+#define VERTICAL_PADDING 10 // Padding of 5 pts either side
 
 @interface SelectImageView()
-@property (readwrite, nonatomic) CGRect selection;
 @property (nonatomic) NSMutableSet *points;
 @end
 
@@ -75,7 +74,7 @@
     maxX = MIN(maxX, self.image.size.width);
     maxY = MIN(maxY, self.image.size.height);
     
-    _selection = CGRectMake(minX,
+    CGRect selection = CGRectMake(minX,
                             minY,
                             maxX - minX,
                             maxY - minY);
@@ -85,14 +84,9 @@
     // Our delegate method is optional, so we should
     // check that the delegate implements it
     if ([strongDelegate respondsToSelector:@selector(selectionWasMade:)]) {
-        [strongDelegate selectionWasMade:_selection];
-//        NSLog(@"Call delegate");
+        [strongDelegate selectionWasMade:selection];
     }
-    
-    NSLog(@"(%f, %f) , (%f, %f)", minX, minY, maxX, maxY);
-//    NSLog(@"%@", [NSValue valueWithCGRect:_selection]);
 }
-
 
 - (void)handleTouches:(NSSet<UITouch *> *)touches {
     
@@ -111,10 +105,6 @@
     
     // Add the starting point to the set of points
     [self handleTouches:touches];
-    
-//    NSLog(@"Touches began");
-//    CGPoint position = [((UITouch *)touches.anyObject) preciseLocationInView:self];
-//    NSLog(@"%f %f", position.x, position.y);
 }
 
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {

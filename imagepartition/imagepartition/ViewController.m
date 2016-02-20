@@ -48,20 +48,7 @@
 
 #pragma SelectImageViewDelegate
 - (void)selectionWasMade:(CGRect)selection {
-    NSLog(@"Delegate callback");
-    
-    // Convert to CG coordinate system
-
-//    CGAffineTransform transform = CGAffineTransformMakeScale(1, -1);
-//    transform = CGAffineTransformTranslate(transform,
-//                                           0, -_imageView.image.size.height);
-//    
-//    CGRect newRectForUIKit = CGRectApplyAffineTransform(selection, transform);
-    
-//    NSLog(@"%@", [NSValue valueWithCGRect:newRectForUIKit]);
-    
-    
-    
+    // Selection was made in the image, so update the partition image to display the selection
     CGImageRef imageRef = CGImageCreateWithImageInRect([_image CGImage], selection);
     UIImage *partitionImage = [UIImage imageWithCGImage:imageRef];
     CGImageRelease(imageRef);
