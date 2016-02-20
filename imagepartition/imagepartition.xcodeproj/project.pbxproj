@@ -15,6 +15,7 @@
 		97D533AA1C789EF900E9DA8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97D533A81C789EF900E9DA8E /* LaunchScreen.storyboard */; };
 		97D533B41C78A24C00E9DA8E /* sainsbury.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 97D533B31C78A24C00E9DA8E /* sainsbury.jpg */; };
 		97D533B61C78A36800E9DA8E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D533B51C78A36800E9DA8E /* CoreGraphics.framework */; };
+		97D533B91C78C6B800E9DA8E /* SelectImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D533B81C78C6B800E9DA8E /* SelectImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,8 @@
 		97D533AB1C789EF900E9DA8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97D533B31C78A24C00E9DA8E /* sainsbury.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = sainsbury.jpg; path = ../../assets/sainsbury.jpg; sourceTree = "<group>"; };
 		97D533B51C78A36800E9DA8E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		97D533B71C78C6B800E9DA8E /* SelectImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectImageView.h; sourceTree = "<group>"; };
+		97D533B81C78C6B800E9DA8E /* SelectImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +71,8 @@
 				97D5339E1C789EF900E9DA8E /* AppDelegate.m */,
 				97D533A01C789EF900E9DA8E /* ViewController.h */,
 				97D533A11C789EF900E9DA8E /* ViewController.m */,
+				97D533B71C78C6B800E9DA8E /* SelectImageView.h */,
+				97D533B81C78C6B800E9DA8E /* SelectImageView.m */,
 				97D533B31C78A24C00E9DA8E /* sainsbury.jpg */,
 				97D533A31C789EF900E9DA8E /* Main.storyboard */,
 				97D533A61C789EF900E9DA8E /* Assets.xcassets */,
@@ -159,6 +164,7 @@
 			files = (
 				97D533A21C789EF900E9DA8E /* ViewController.m in Sources */,
 				97D5339F1C789EF900E9DA8E /* AppDelegate.m in Sources */,
+				97D533B91C78C6B800E9DA8E /* SelectImageView.m in Sources */,
 				97D5339C1C789EF900E9DA8E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
