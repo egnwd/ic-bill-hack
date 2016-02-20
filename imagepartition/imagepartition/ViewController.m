@@ -112,7 +112,7 @@
     
     // Find longest chain where there are no more than 5 consective empty rows
     
-#define MAX_ZERO 3
+#define MAX_ZERO 5
     
     // The start and end of the maximum sequence
     int start = 0;
@@ -122,7 +122,7 @@
     int new_start = 0;
     
     for (int j = 0; j < inputHeight; j++) {
-        if (emptyRow[j]) {
+        if (emptyRow[j] == 0) {
             if (count == 0) {
                 // We have reached the end of the sequence, or we have yet to begin a sequence
                 new_start = j+1;
@@ -140,6 +140,12 @@
             count = MAX_ZERO;
         }
     }
+    
+    for (int i = start; i <= end; i++) {
+        NSLog(@"%d", emptyRow[i]);
+    }
+    
+    NSLog(@"Max of length: %d, between (%d, %d)", end - start, start, end);
     
     // 4. Create a new UIImage
     CGImageRef newCGImage = CGBitmapContextCreateImage(context);
