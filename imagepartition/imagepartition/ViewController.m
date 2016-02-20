@@ -58,7 +58,7 @@
     
     // Add the starting point to the set of points
     for (UITouch *touch in touches) {
-        CGPoint position = [touch preciseLocationInView:_imageView];
+        CGPoint position = [touch preciseLocationInView:self.view];
         [_points addObject:[NSValue valueWithCGPoint:position]];
     }
 }
@@ -85,14 +85,23 @@
         maxY = MAX(maxY, point.y);
     }
     
-    _selection = CGRectMake(minX, minY, maxX - minX, maxY - minY);
-    NSLog(@"%@", [NSValue valueWithCGRect:_selection]);
+    #define PADDING 5
+    
+    // Scale the points, so it gives pixel data
+    float scale =  _imageView.image.size.width / _imageView.frame.size.width;
+    
+    _selection = CGRectMake(minX - PADDING, minY - PADDING, (maxX - minX + PADDING) * scale, (maxY - minY + PADDING) * scale);
+//    NSLog(@"%@", [NSValue valueWithCGRect:_selection]);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
     // Empty the previous set of points
     [_points removeAllObjects];
+    
+    CGPoint position = [((UITouch *)touches.anyObject) preciseLocationInView:_imageView];
+    
+    if (CGRectContainsPoint(_imageView.frame, position)) NSLog(@"Test conversion: %f %f", position.x, position.y);
     
     // Add the starting point to the set of points
     [self handleTouches:touches];
