@@ -16,7 +16,7 @@ class Friend {
   
   init(name: String, pictureName: String, mondoId: String) {
     self.name = name
-    self.picture = UIImage.init(named: pictureName)!
+    self.picture = UIImage(named: pictureName)!
     self.mondoId = mondoId
   }
 }

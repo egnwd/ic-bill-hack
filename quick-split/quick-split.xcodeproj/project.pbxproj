@@ -503,6 +503,7 @@
 				05CCD6CD1C789B20001B5893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05CCD6CE1C789B20001B5893 /* Build configuration list for PBXNativeTarget "quick-splitTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +512,7 @@
 				05CCD6D01C789B20001B5893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05CCD6D11C789B20001B5893 /* Build configuration list for PBXNativeTarget "quick-splitUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +521,7 @@
 				05CCD6D31C789B20001B5893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
