@@ -39,15 +39,13 @@ class FriendSelectionViewController: UIViewController, UICollectionViewDataSourc
 
   
   // MARK: - Navigation
-  
-  @IBAction func goToPriceAllocation() {
-    
-  }
 
   // In a storyboard-based application, you will often want to do a little preparation before navigation
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+    if (segue.identifier == "goToPriceAllocation") {
+      let priceAllocator = segue.destinationViewController as! PriceAllocationViewController
+      priceAllocator.friends = self.selectedFriends
+    }
   }
 
   
