@@ -18,13 +18,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    // disable multitouch - this messes with touch events when drawing
+    [self.view setMultipleTouchEnabled:FALSE];
+    
     UIImage *image = [UIImage imageNamed:@"sainsbury.jpg"];
     NSLog(@"%@", image);
     _imageView.image = image;
     _imageView.contentMode = UIViewContentModeScaleAspectFit;
     
     // Partition the image
-    CGRect cropRect = CGRectMake(0, 0, 10, 10);
+    CGRect cropRect = CGRectMake(900, 800, 400, 100);
     CGImageRef imageRef = CGImageCreateWithImageInRect([image CGImage], cropRect);
     UIImage *partitionImage = [UIImage imageWithCGImage:imageRef];
     CGImageRelease(imageRef);
