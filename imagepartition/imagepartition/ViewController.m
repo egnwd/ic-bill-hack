@@ -175,6 +175,42 @@
     return processedImage;
 }
 
+#pragma SelectImageViewDelegate
+- (void)selectionWasMade:(CGRect)selection {
+    // Selection was made in the image, so update the partition image to display the selection
+    CGImageRef imageRef = CGImageCreateWithImageInRect([_image CGImage], selection);
+    UIImage *partitionImage = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    _partitionImageView.image = partitionImage;
+    
+    
+    
+    /** Instantiate the scanning coordinator */
+    NSError *error;
+    self.coordinator = [self coordinatorWithError:&error];
+    
+    /** If scanning isn't supported, present an error */
+    if (self.coordinator == nil) {
+        NSString *messageString = [error localizedDescription];
+        [[[UIAlertView alloc] initWithTitle:@"Warning"
+                                    message:messageString
+                                   delegate:nil
+                          cancelButtonTitle:@"OK"
+                          otherButtonTitles:nil, nil] show];
+        
+        return;
+    }
+    
+    [self.coordinator processImage:partitionImage
+                    scanningRegion:CGRectMake(0.0, 0.0, 1.0, 1.0)
+                          delegate:self];
+    
+    _partitionImageView.image = [self processImage:partitionImage];
+    
+}
+
+#pragma PPScanDelegate
+
 /**
  * Method allocates and initializes the Scanning coordinator object.
  * Coordinator is initialized with settings for scanning
@@ -225,41 +261,6 @@
     _coordinator = [[PPCoordinator alloc] initWithSettings:settings];
     
     return _coordinator;
-}
-
-
-#pragma SelectImageViewDelegate
-- (void)selectionWasMade:(CGRect)selection {
-    // Selection was made in the image, so update the partition image to display the selection
-    CGImageRef imageRef = CGImageCreateWithImageInRect([_image CGImage], selection);
-    UIImage *partitionImage = [UIImage imageWithCGImage:imageRef];
-    CGImageRelease(imageRef);
-    _partitionImageView.image = partitionImage;
-    
-    
-    
-    /** Instantiate the scanning coordinator */
-    NSError *error;
-    self.coordinator = [self coordinatorWithError:&error];
-    
-    /** If scanning isn't supported, present an error */
-    if (self.coordinator == nil) {
-        NSString *messageString = [error localizedDescription];
-        [[[UIAlertView alloc] initWithTitle:@"Warning"
-                                    message:messageString
-                                   delegate:nil
-                          cancelButtonTitle:@"OK"
-                          otherButtonTitles:nil, nil] show];
-        
-        return;
-    }
-    
-    [self.coordinator processImage:partitionImage
-                    scanningRegion:CGRectMake(0.0, 0.0, 1.0, 1.0)
-                          delegate:self];
-    
-    _partitionImageView.image = [self processImage:partitionImage];
-
 }
 
 - (void)scanningViewController:(UIViewController<PPScanningViewController> *)scanningViewController
