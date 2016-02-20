@@ -11,6 +11,7 @@ import UIKit
 
 class DemoFriends {
   var friends: [Friend]
+  static let sharedInstance = DemoFriends()
   
   init() {
     let alice = Friend(name: "Alice", pictureName: "alice.png", mondoId: "acc_1")
@@ -27,7 +28,12 @@ class DemoFriends {
     friends = [alice, bob, clare, david, elliot, fred, george, harry, isaac, jonathan]
   }
   
-  func getFriends() -> [Friend] {
-    return self.friends
+  static func getFriends() -> [Friend] {
+    return sharedInstance.friends
   }
+
+  static func demoFriends() -> DemoFriends {
+    return sharedInstance
+  }
+  
 }
