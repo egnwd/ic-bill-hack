@@ -9,7 +9,8 @@
 #import "SelectImageView.h"
 
 // TODO: add padding to the delegate
-#define PADDING 5 // Padding of 5 pts either side
+#define HORIZONTAL_PADDING 5 // Padding of 5 pts either side
+#define VERTICAL_PADDING 5 // Padding of 5 pts either side
 
 @interface SelectImageView()
 @property (readwrite, nonatomic) CGRect selection;
@@ -57,10 +58,10 @@
     float scale =  self.image.size.width / self.frame.size.width;
     
     // Add padding
-    minX += PADDING;
-    maxX += PADDING;
-    minY += PADDING;
-    maxY += PADDING;
+    minX -= HORIZONTAL_PADDING;
+    maxX += HORIZONTAL_PADDING;
+    minY -= VERTICAL_PADDING;
+    maxY += VERTICAL_PADDING;
     
     // Scale the coordinates
     minX *= scale;

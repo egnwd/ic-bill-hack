@@ -52,17 +52,17 @@
     
     // Convert to CG coordinate system
 
-    CGAffineTransform transform = CGAffineTransformMakeScale(1, -1);
-    transform = CGAffineTransformTranslate(transform,
-                                           0, -_imageView.image.size.height);
-    
-    CGRect newRectForUIKit = CGRectApplyAffineTransform(selection, transform);
+//    CGAffineTransform transform = CGAffineTransformMakeScale(1, -1);
+//    transform = CGAffineTransformTranslate(transform,
+//                                           0, -_imageView.image.size.height);
+//    
+//    CGRect newRectForUIKit = CGRectApplyAffineTransform(selection, transform);
     
 //    NSLog(@"%@", [NSValue valueWithCGRect:newRectForUIKit]);
     
     
     
-    CGImageRef imageRef = CGImageCreateWithImageInRect([_image CGImage], newRectForUIKit);
+    CGImageRef imageRef = CGImageCreateWithImageInRect([_image CGImage], selection);
     UIImage *partitionImage = [UIImage imageWithCGImage:imageRef];
     CGImageRelease(imageRef);
     _partitionImageView.image = partitionImage;
