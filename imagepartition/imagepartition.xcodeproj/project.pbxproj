@@ -355,6 +355,7 @@
 			baseConfigurationReference = 98528FDFA89BF57F33001974 /* Pods-imagepartition.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = imagepartition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "stealth-phoenix.quick-split";
@@ -367,6 +368,7 @@
 			baseConfigurationReference = FA2E1D52EB8A8DB393CCBE4E /* Pods-imagepartition.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = imagepartition/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "stealth-phoenix.quick-split";
