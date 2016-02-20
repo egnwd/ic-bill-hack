@@ -13,6 +13,7 @@ class Friend {
   var name: String 
   var picture: UIImage
   var mondoId: String
+  var colour: UIColor?
   
   init(name: String, pictureName: String, mondoId: String) {
     self.name = name
