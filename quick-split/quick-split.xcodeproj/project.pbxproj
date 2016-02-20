@@ -21,6 +21,7 @@
 		05CCD6E21C78BCEB001B5893 /* FriendSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6E11C78BCEB001B5893 /* FriendSelectionViewController.swift */; };
 		05CCD6E41C78C8BE001B5893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CCD6E31C78C8BE001B5893 /* Assets.xcassets */; };
 		05CCD6E81C78FCED001B5893 /* PriceAllocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6E71C78FCED001B5893 /* PriceAllocationViewController.swift */; };
+		05CCD6EA1C7900C1001B5893 /* FriendTotalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6E91C7900C1001B5893 /* FriendTotalCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		05CCD6E11C78BCEB001B5893 /* FriendSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSelectionViewController.swift; sourceTree = "<group>"; };
 		05CCD6E31C78C8BE001B5893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05CCD6E71C78FCED001B5893 /* PriceAllocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceAllocationViewController.swift; sourceTree = "<group>"; };
+		05CCD6E91C7900C1001B5893 /* FriendTotalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTotalCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				05CCD6D71C78A771001B5893 /* Friend.swift */,
 				05CCD6D91C78A8C1001B5893 /* DemoFriends.swift */,
 				05CCD6DF1C78B1BE001B5893 /* FriendCollectionViewCell.swift */,
+				05CCD6E91C7900C1001B5893 /* FriendTotalCollectionViewCell.swift */,
 				05CCD6E11C78BCEB001B5893 /* FriendSelectionViewController.swift */,
 				05CCD6E71C78FCED001B5893 /* PriceAllocationViewController.swift */,
 			);
@@ -289,6 +292,7 @@
 				05CCD6A71C789B20001B5893 /* MasterViewController.swift in Sources */,
 				05CCD6A91C789B20001B5893 /* DetailViewController.swift in Sources */,
 				05CCD6E81C78FCED001B5893 /* PriceAllocationViewController.swift in Sources */,
+				05CCD6EA1C7900C1001B5893 /* FriendTotalCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
