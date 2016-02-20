@@ -14,6 +14,7 @@ class FriendCollectionViewCell: UICollectionViewCell {
   var name: UILabel = UILabel()
   var avatar: UIImageView = UIImageView()
   var friend: Friend?
+  var isChosen = false
 
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)

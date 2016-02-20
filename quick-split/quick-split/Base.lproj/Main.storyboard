@@ -40,7 +40,7 @@
                                 </cells>
                                 <connections>
                                     <outlet property="dataSource" destination="pLu-eF-Q9p" id="CVE-Ia-Wph"/>
-                                    <outlet property="delegate" destination="pLu-eF-Q9p" id="fVr-jv-Wvv"/>
+                                    <outlet property="delegate" destination="pLu-eF-Q9p" id="gVn-sk-OSj"/>
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Useful Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tPc-KX-FSm">

@@ -8,11 +8,12 @@
 
 import UIKit
 
-class FriendSelectionViewController: UIViewController, UICollectionViewDataSource {
+class FriendSelectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
   
   var friends: [Friend] = []
   @IBOutlet var friendCollectionView: UICollectionView!
   var colours: [UIColor] = []
+  var selectedFriends: [Friend] = []
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -54,4 +55,26 @@ class FriendSelectionViewController: UIViewController, UICollectionViewDataSourc
     cell.populateWithFriend(friends[indexPath.row])
     return cell
   }
+  
+  func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    let cell = friendCollectionView.cellForItemAtIndexPath(indexPath) as! FriendCollectionViewCell
+    if (cell.isChosen) {
+      if let friend = cell.friend {
+        colours.append(friend.colour!)
+        let defaultColour = UIColor.whiteColor()
+        cell.backgroundColor = defaultColour
+        friend.colour = defaultColour
+      }
+    } else {
+      if (colours.count == 0) { return }
+      let colour = colours.popLast()
+      cell.backgroundColor = colour
+      if let friend = cell.friend {
+        friend.colour = colour
+        selectedFriends.append(friend);
+      }
+    }
+     cell.isChosen = !cell.isChosen
+  }
+  
 }
