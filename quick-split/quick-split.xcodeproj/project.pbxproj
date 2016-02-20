@@ -18,6 +18,7 @@
 		05CCD6C71C789B20001B5893 /* quick_splitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6C61C789B20001B5893 /* quick_splitUITests.swift */; };
 		05CCD6D81C78A771001B5893 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6D71C78A771001B5893 /* Friend.swift */; };
 		05CCD6DA1C78A8C1001B5893 /* DemoFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6D91C78A8C1001B5893 /* DemoFriends.swift */; };
+		05CCD6E01C78B1BE001B5893 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6DF1C78B1BE001B5893 /* FriendCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		05CCD6C81C789B20001B5893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05CCD6D71C78A771001B5893 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		05CCD6D91C78A8C1001B5893 /* DemoFriends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoFriends.swift; sourceTree = "<group>"; };
+		05CCD6DF1C78B1BE001B5893 /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				05CCD6A31C789B20001B5893 /* quick_split.xcdatamodeld */,
 				05CCD6D71C78A771001B5893 /* Friend.swift */,
 				05CCD6D91C78A8C1001B5893 /* DemoFriends.swift */,
+				05CCD6DF1C78B1BE001B5893 /* FriendCollectionViewCell.swift */,
 			);
 			path = "quick-split";
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				05CCD6DA1C78A8C1001B5893 /* DemoFriends.swift in Sources */,
 				05CCD6A51C789B20001B5893 /* quick_split.xcdatamodeld in Sources */,
 				05CCD6A21C789B20001B5893 /* AppDelegate.swift in Sources */,
+				05CCD6E01C78B1BE001B5893 /* FriendCollectionViewCell.swift in Sources */,
 				05CCD6D81C78A771001B5893 /* Friend.swift in Sources */,
 				05CCD6A71C789B20001B5893 /* MasterViewController.swift in Sources */,
 				05CCD6A91C789B20001B5893 /* DetailViewController.swift in Sources */,
