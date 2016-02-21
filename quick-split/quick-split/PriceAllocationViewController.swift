@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreGraphics
+import MicroBlink
 
-class PriceAllocationViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, SelectImageViewDelegate, UITableViewDelegate, UITableViewDataSource {
+class PriceAllocationViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, SelectImageViewDelegate, PPScanDelegate, UITableViewDelegate, UITableViewDataSource {
   @IBOutlet var friendCollectionView: UICollectionView!
   @IBOutlet var instructions: UILabel!
   @IBOutlet var nextButton: UIButton!
@@ -23,7 +24,6 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
   var selectionCount = 0
 
   override func viewDidLoad() {
-    weak var selectionDisplayImageView: UIImageView!
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     
@@ -146,4 +146,99 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
     nextButton.hidden = !canProceed
     instructions.hidden = canProceed
   }
+    
+    
+  // MARK - OCR
+    
+  func coordinatorWithError(error: NSErrorPointer) -> PPCoordinator? {
+        
+        /** 0. Check if scanning is supported */
+        
+        if (PPCoordinator.isScanningUnsupportedForCameraType(PPCameraType.Back, error: error)) {
+            return nil;
+        }
+        
+        
+        /** 1. Initialize the Scanning settings */
+         
+         // Initialize the scanner settings object. This initialize settings with all default values.
+        let settings: PPSettings = PPSettings()
+        
+        
+        /** 2. Setup the license key */
+        
+        // Visit www.microblink.com to get the license key for your app
+        settings.licenseSettings.licenseKey = "62KNMAZV-FD4GRA4K-UCTGTZKV-QXIOKVMF-2DSVLBOQ-4VKYLUHF-KWC5BZKV-RUAJHDL5"
+        
+        
+        /**
+         * 3. Set up what is being scanned. See detailed guides for specific use cases.
+         * Here's an example for initializing MRTD and USDL scanning
+         */
+         
+         // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
+        let mrtdRecognizerSettings = PPMrtdRecognizerSettings()
+        
+        // Add MRTD Recognizer setting to a list of used recognizer settings
+        settings.scanSettings.addRecognizerSettings(mrtdRecognizerSettings)
+        
+        // To specify we want to perform USDL (US Driver's license) recognition, initialize the USDL recognizer settings
+        let usdlRecognizerSettings = PPUsdlRecognizerSettings()
+        
+        // Add USDL Recognizer setting to a list of used recognizer settings
+        settings.scanSettings.addRecognizerSettings(usdlRecognizerSettings)
+        
+        
+        /** 4. Initialize the Scanning Coordinator object */
+        
+        let coordinator: PPCoordinator = PPCoordinator(settings: settings)
+        
+        return coordinator
+    }
+    
+    func scanningViewControllerUnauthorizedCamera(scanningViewController: UIViewController) {
+        // Add any logic which handles UI when app user doesn't allow usage of the phone's camera
+    }
+    
+    func scanningViewController(scanningViewController: UIViewController, didFindError error: NSError) {
+        // Can be ignored. See description of the method
+    }
+    
+    func scanningViewControllerDidClose(scanningViewController: UIViewController) {
+        // As scanning view controller is presented full screen and modally, dismiss it
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func scanningViewController(scanningViewController: UIViewController?, didOutputResults results: [PPRecognizerResult]) {
+        
+        let scanConroller : PPScanningViewController = scanningViewController as! PPScanningViewController
+        
+        // Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
+        
+        // first, pause scanning until we process all the results
+        scanConroller.pauseScanning()
+        
+        var message : String = ""
+        var title : String = ""
+        
+        // Collect data from the result
+        for result in results {
+            if(result.isKindOfClass(PPMrtdRecognizerResult)) {
+                let mrtdResult : PPMrtdRecognizerResult = result as! PPMrtdRecognizerResult
+                title="MRTD"
+                message=mrtdResult.description
+            }
+            if(result.isKindOfClass(PPUsdlRecognizerResult)) {
+                let usdlResult : PPUsdlRecognizerResult = result as! PPUsdlRecognizerResult
+                title="USDL"
+                message=usdlResult.description
+            }
+        }
+        
+        //present the alert view with scanned results
+        let alertView = UIAlertView(title: title, message: message, delegate: self, cancelButtonTitle: "OK")
+        alertView.show()
+    }
+
+
 }
