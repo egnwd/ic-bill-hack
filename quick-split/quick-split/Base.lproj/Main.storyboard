@@ -146,9 +146,9 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhp-75-iGP">
                                 <rect key="frame" x="0.0" y="536" width="600" height="64"/>
                                 <color key="backgroundColor" red="0.01176470588" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Next">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="0.01176470588" green="0.2470588235" blue="0.29411764709999999" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="Zog-KA-VpN" kind="show" identifier="goToConfirmation" id="8JU-JY-6W5"/>
@@ -212,7 +212,7 @@
                                     <outlet property="delegate" destination="8ka-uG-won" id="pWT-Xw-suP"/>
                                 </connections>
                             </collectionView>
-                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sainsbury" translatesAutoresizingMaskIntoConstraints="NO" id="uI2-1e-DFn" customClass="SelectImageView">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="resturant" translatesAutoresizingMaskIntoConstraints="NO" id="uI2-1e-DFn" customClass="SelectImageView">
                                 <rect key="frame" x="156" y="145" width="288" height="383"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uI2-1e-DFn" secondAttribute="height" multiplier="3:4" id="lqD-BG-eVe"/>
@@ -311,6 +311,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="sainsbury" width="2448" height="3264"/>
+        <image name="resturant" width="772" height="1029"/>
     </resources>
 </document>
