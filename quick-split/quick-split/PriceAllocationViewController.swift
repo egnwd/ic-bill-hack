@@ -17,6 +17,7 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
   var friends: [Friend] = []
   var selectedFriend: FriendTotalCollectionViewCell?
   var dummyPrices: Dictionary<Int, FriendTotalCollectionViewCell?> = [95: nil, 45: nil, 160: nil, 1000: nil, 52136: nil]
+  var selectionCount = 0
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -27,20 +28,18 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-    
-
-  /*
+  
   // MARK: - Navigation
 
   // In a storyboard-based application, you will often want to do a little preparation before navigation
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+    if (segue.identifier == "goToConfirmation") {
+      let confirmation = segue.destinationViewController as! ConfirmationViewController
+      confirmation.friends = self.getFriends()
+    }
   }
-  */
   
   // MARK: - Collection
-  
   
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return friends.count
@@ -65,6 +64,10 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
     }
   }
   
+  func getFriends() -> [FriendTotalCollectionViewCell] {
+    return friendCollectionView.visibleCells() as! [FriendTotalCollectionViewCell]
+  }
+  
   // MARK: - Table View
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return dummyPrices.count
@@ -85,10 +88,15 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
     let price = getPrice((cell?.textLabel!.text!)!)
     if let friend = dummyPrices[price] {
       friend?.total -= price
+      if (friend !== nil) {
+        selectionCount--
+      }
     }
     cell?.backgroundColor = selectedFriend!.backgroundColor
     dummyPrices[price] = selectedFriend!
     selectedFriend!.total += price
+    selectionCount++
+    updateNavigation()
   }
   
   func getPrice(text: String) -> Int {
@@ -107,8 +115,16 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
       let price = getPrice((cell?.textLabel!.text!)!)
       if let friend = dummyPrices[price] {
         friend?.total -= price
+        selectionCount--
       }
       dummyPrices.removeValueForKey(price)
     }
+    updateNavigation()
+  }
+  
+  func updateNavigation() {
+    let canProceed = selectionCount >= 1
+    nextButton.hidden = !canProceed
+    instructions.hidden = canProceed
   }
 }

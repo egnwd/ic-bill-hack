@@ -170,6 +170,9 @@
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhp-75-iGP">
                                 <rect key="frame" x="20" y="536" width="560" height="64"/>
                                 <state key="normal" title="Next"/>
+                                <connections>
+                                    <segue destination="Zog-KA-VpN" kind="show" identifier="goToConfirmation" id="8JU-JY-6W5"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UYN-1j-P66">
                                 <rect key="frame" x="0.0" y="153" width="600" height="375"/>
@@ -235,6 +238,24 @@
                 </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="366" y="-639"/>
+        </scene>
+        <!--Confirmation View Controller-->
+        <scene sceneID="EFz-rJ-f4i">
+            <objects>
+                <viewController id="Zog-KA-VpN" customClass="ConfirmationViewController" customModule="quick_split" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HXq-JS-7LR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Edb-VB-J3Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MXv-Wk-HOd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ugO-yi-yv9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1185" y="-639"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aa9-IN-wxI">
