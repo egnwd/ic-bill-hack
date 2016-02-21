@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import CoreGraphics
 
-class PriceAllocationViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDelegate, UITableViewDataSource {
+class PriceAllocationViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, SelectImageViewDelegate, UITableViewDelegate, UITableViewDataSource {
   @IBOutlet var friendCollectionView: UICollectionView!
   @IBOutlet var instructions: UILabel!
   @IBOutlet var nextButton: UIButton!
   @IBOutlet var pricesTable: UITableView!
-  
+  @IBOutlet weak var imageView: SelectImageView!
+    
   var friends: [Friend] = []
   var selectedFriend: FriendTotalCollectionViewCell?
   var dummyPrices: Dictionary<Int, FriendTotalCollectionViewCell?> = [95: nil, 45: nil, 160: nil, 1000: nil, 52136: nil]
@@ -22,11 +24,27 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
+    
+    // Set the delegate of the SelectImageView
+    imageView.delegate = self
+    
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
+  }
+    
+  // MARK: - SelectImageViewDelegate
+  func selectionWasMade(selection: CGRect) {
+    NSLog("Selection made")
+    let ref:CGImageRef = CGImageCreateWithImageInRect(imageView.image?.CGImage, selection)!
+    let croppedImage:UIImage = UIImage(CGImage: ref)
+    nextButton.imageView?.image = croppedImage
+//    CGImageRef imageRef = CGImageCreateWithImageInRect([_image CGImage], selection)
+//    UIImage *partitionImage = [UIImage imageWithCGImage:imageRef];
+//    CGImageRelease(imageRef);
+    
   }
   
   // MARK: - Navigation

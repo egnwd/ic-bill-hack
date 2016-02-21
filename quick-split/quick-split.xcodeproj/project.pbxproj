@@ -24,6 +24,7 @@
 		05CCD6EA1C7900C1001B5893 /* FriendTotalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6E91C7900C1001B5893 /* FriendTotalCollectionViewCell.swift */; };
 		05CCD6EC1C7935ED001B5893 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6EB1C7935ED001B5893 /* ConfirmationViewController.swift */; };
 		97D533DF1C79B5A400E9DA8E /* SelectImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 97D533DE1C79B5A400E9DA8E /* SelectImageView.m */; };
+		97D533E11C79BDAB00E9DA8E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97D533E01C79BDAB00E9DA8E /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		97D533DC1C79B5A300E9DA8E /* quick-split-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "quick-split-Bridging-Header.h"; sourceTree = "<group>"; };
 		97D533DD1C79B5A400E9DA8E /* SelectImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectImageView.h; path = ../../imagepartition/imagepartition/SelectImageView.h; sourceTree = "<group>"; };
 		97D533DE1C79B5A400E9DA8E /* SelectImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectImageView.m; path = ../../imagepartition/imagepartition/SelectImageView.m; sourceTree = "<group>"; };
+		97D533E01C79BDAB00E9DA8E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97D533E11C79BDAB00E9DA8E /* CoreGraphics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +102,7 @@
 		05CCD6951C789B20001B5893 = {
 			isa = PBXGroup;
 			children = (
+				97D533E01C79BDAB00E9DA8E /* CoreGraphics.framework */,
 				05CCD6A01C789B20001B5893 /* quick-split */,
 				05CCD6BA1C789B20001B5893 /* quick-splitTests */,
 				05CCD6C51C789B20001B5893 /* quick-splitUITests */,

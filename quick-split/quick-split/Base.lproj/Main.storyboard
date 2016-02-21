@@ -251,6 +251,7 @@
                     </view>
                     <connections>
                         <outlet property="friendCollectionView" destination="bRt-wL-Kbz" id="JrP-xt-dSf"/>
+                        <outlet property="imageView" destination="uI2-1e-DFn" id="alT-0S-AMX"/>
                         <outlet property="instructions" destination="hYQ-JL-SF9" id="TpC-Oo-hqj"/>
                         <outlet property="nextButton" destination="Fhp-75-iGP" id="bfH-M1-9v7"/>
                         <outlet property="pricesTable" destination="UYN-1j-P66" id="2tI-MU-qyA"/>
