@@ -92,13 +92,13 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
     if let friend = dummyPrices[price] {
       friend?.total -= price
       if (friend !== nil) {
-        selectionCount--
+        selectionCount -= 1
       }
     }
     cell?.backgroundColor = selectedFriend!.friend?.colour
     dummyPrices[price] = selectedFriend!
     selectedFriend!.total += price
-    selectionCount++
+    selectionCount += 1
     updateNavigation()
   }
   
@@ -118,7 +118,7 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
       let price = getPrice((cell?.textLabel!.text!)!)
       if let friend = dummyPrices[price] {
         friend?.total -= price
-        selectionCount--
+        selectionCount -= 1
       }
       dummyPrices.removeValueForKey(price)
     }

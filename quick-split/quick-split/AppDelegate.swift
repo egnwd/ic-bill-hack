@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import MondoKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDelegate {
@@ -19,6 +20,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
     // Override point for customization after application launch.
     let navigationController = self.window!.rootViewController as! UINavigationController
     navigationController.delegate = self
+    
+    return setUpMondo()
+  }
+  
+  private func setUpMondo() -> Bool {
+    guard let mondoKeysPath = NSBundle.mainBundle().pathForResource("mondo", ofType: "plist"),
+      mondoKeys = NSDictionary(contentsOfFile: mondoKeysPath),
+      mondoClientId = mondoKeys["clientId"] as? String,
+      mondoClientSecret = mondoKeys["clientSecret"] as? String else {
+        
+        assertionFailure("MondoKeys.plist containing 'clientId' and 'clientSecret' required but not found in main bundle")
+        return false
+    }
+    
+    MondoAPI.instance.initialiseWithClientId(mondoClientId, clientSecret : mondoClientSecret)
+    
     return true
   }
 

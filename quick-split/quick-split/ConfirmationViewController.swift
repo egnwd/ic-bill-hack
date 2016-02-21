@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MondoKit
 
 class ConfirmationViewController: UIViewController {
   
@@ -18,6 +19,9 @@ class ConfirmationViewController: UIViewController {
     self.navigationController!.navigationBar.hidden = true
     let transactionId = String(Int(NSDate().timeIntervalSince1970))
     for friendCell in friends {
+      if (friendCell.friend?.mondoId == "acc_000094cjbHqqTaBqC8CQMb") {
+        pushTransactionToMondo((friendCell.friend?.mondoId)!, total: friendCell.total, transaction_id: transactionId)
+      }
       pushTransactionToDinnerWith(friendCell.friend!, transactionId: transactionId, total: friendCell.total)
     }
   }
@@ -27,22 +31,21 @@ class ConfirmationViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  func pushTransactionToMondo(mondo_id: String) {
-    let postEndpoint = "https://api.getmondo.co.uk/feed"
-    guard let url = NSURL(string: postEndpoint) else {
-      print("Error: cannot create url")
-      return
+  func pushTransactionToMondo(mondo_id: String, total: Int, transaction_id: String) {
+    if MondoAPI.instance.isAuthorized {
+      MondoAPI.instance.addFeedItemForAccount(mondo_id, url: "http://dinner-with-stealth-phoenix.com/request/\(mondo_id)/\(transaction_id)", title: "You have a new payment request", body: String(format: "£%d.%02d", arguments: [total / 100, total % 100]), image_url: "http://dinner-with-stealth-phoenix.com/assets/images/mondo_icon.png", completion: { (error) in print(error) })
+    } else {
+      let oauthViewController = MondoAPI.instance.newAuthViewController() { (success, error) in
+        if success {
+          self.dismissViewControllerAnimated(true) {
+            MondoAPI.instance.addFeedItemForAccount(mondo_id, url: "http://dinner-with-stealth-phoenix.com/request/\(mondo_id)/\(transaction_id)", title: "You have a new payment request", body: String(format: "£%d.%02d", arguments: [total / 100, total % 100]), image_url: "http://dinner-with-stealth-phoenix.com/assets/images/mondo_icon.png", completion: { (error) in print(error) })
+          }
+        } else {
+            print("Error")
+        }
+      }
+      presentViewController(oauthViewController, animated: true, completion: nil)
     }
-    let urlRequest = NSMutableURLRequest(URL: url)
-    urlRequest.HTTPMethod = "POST"
-    let config = NSURLSessionConfiguration.defaultSessionConfiguration()
-    let session = NSURLSession(configuration: config)
-    
-    let bodyData = "account_id"
-    urlRequest.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
-    
-    let task = session.dataTaskWithRequest(urlRequest, completionHandler: makeTransaction)
-    task.resume()
   }
   
   func pushTransactionToDinnerWith(friend: Friend, transactionId: String, total: Int) {
