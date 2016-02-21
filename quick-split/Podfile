@@ -1,5 +1,4 @@
 platform :ios, '8.0'
 target 'quick-split' do
-  pod 'PPBlinkID', '~> 1.3.0'
+    pod 'PPBlinkOCR', '~> 1.1.1'
 end
-

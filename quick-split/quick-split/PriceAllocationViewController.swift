@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreGraphics
-import MicroBlink
 
 class PriceAllocationViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, SelectImageViewDelegate, PPScanDelegate, UITableViewDelegate, UITableViewDataSource {
   @IBOutlet var friendCollectionView: UICollectionView!
@@ -43,6 +42,20 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
     let ref:CGImageRef = CGImageCreateWithImageInRect(imageView.image?.CGImage, selection)!
     let croppedImage:UIImage = UIImage(CGImage: ref)
     displayImageView.image = croppedImage
+//    
+//    /** Instantiate the scanning coordinator */
+//    let error : NSErrorPointer = nil
+//    let coordinator:PPCoordinator?=self.coordinatorWithError(error)
+//    
+//    /** If scanning isn't supported, present an error */
+//    if coordinator == nil {
+//        let messageString: String = (error.memory?.localizedDescription) ?? ""
+//        UIAlertView(title: "Warning", message: messageString, delegate: nil, cancelButtonTitle: "Ok").show()
+//        return
+//    }
+//    
+//    coordinator!.processImage(croppedImage, scanningRegion: CGRectMake(0.0, 0.0, 1.0, 1.0), delegate: self)
+    
   }
   
   // MARK: - Navigation
@@ -151,14 +164,7 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
   // MARK - OCR
     
   func coordinatorWithError(error: NSErrorPointer) -> PPCoordinator? {
-        
-        /** 0. Check if scanning is supported */
-        
-        if (PPCoordinator.isScanningUnsupportedForCameraType(PPCameraType.Back, error: error)) {
-            return nil;
-        }
-        
-        
+    
         /** 1. Initialize the Scanning settings */
          
          // Initialize the scanner settings object. This initialize settings with all default values.
@@ -173,21 +179,18 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
         
         /**
          * 3. Set up what is being scanned. See detailed guides for specific use cases.
-         * Here's an example for initializing MRTD and USDL scanning
+         * Here's an example for initializing raw OCR scanning.
          */
          
          // To specify we want to perform MRTD (machine readable travel document) recognition, initialize the MRTD recognizer settings
-        let mrtdRecognizerSettings = PPMrtdRecognizerSettings()
+        let ocrRecognizerSettings = PPOcrRecognizerSettings()
         
         // Add MRTD Recognizer setting to a list of used recognizer settings
-        settings.scanSettings.addRecognizerSettings(mrtdRecognizerSettings)
-        
-        // To specify we want to perform USDL (US Driver's license) recognition, initialize the USDL recognizer settings
-        let usdlRecognizerSettings = PPUsdlRecognizerSettings()
-        
-        // Add USDL Recognizer setting to a list of used recognizer settings
-        settings.scanSettings.addRecognizerSettings(usdlRecognizerSettings)
-        
+        settings.scanSettings.addRecognizerSettings(ocrRecognizerSettings)
+    
+    
+        ocrRecognizerSettings.addOcrParser(PPRawOcrParserFactory(), name: "Raw ocr")
+        ocrRecognizerSettings.addOcrParser(PPPriceOcrParserFactory(), name: "Price")
         
         /** 4. Initialize the Scanning Coordinator object */
         
@@ -195,7 +198,7 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
         
         return coordinator
     }
-    
+
     func scanningViewControllerUnauthorizedCamera(scanningViewController: UIViewController) {
         // Add any logic which handles UI when app user doesn't allow usage of the phone's camera
     }
@@ -209,35 +212,8 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    func scanningViewController(scanningViewController: UIViewController?, didOutputResults results: [PPRecognizerResult]) {
-        
-        let scanConroller : PPScanningViewController = scanningViewController as! PPScanningViewController
-        
-        // Here you process scanning results. Scanning results are given in the array of PPRecognizerResult objects.
-        
-        // first, pause scanning until we process all the results
-        scanConroller.pauseScanning()
-        
-        var message : String = ""
-        var title : String = ""
-        
-        // Collect data from the result
-        for result in results {
-            if(result.isKindOfClass(PPMrtdRecognizerResult)) {
-                let mrtdResult : PPMrtdRecognizerResult = result as! PPMrtdRecognizerResult
-                title="MRTD"
-                message=mrtdResult.description
-            }
-            if(result.isKindOfClass(PPUsdlRecognizerResult)) {
-                let usdlResult : PPUsdlRecognizerResult = result as! PPUsdlRecognizerResult
-                title="USDL"
-                message=usdlResult.description
-            }
-        }
-        
-        //present the alert view with scanned results
-        let alertView = UIAlertView(title: title, message: message, delegate: self, cancelButtonTitle: "OK")
-        alertView.show()
+    func scanningViewController(scanningViewController: UIViewController!, didOutputResults results: [AnyObject]!) {
+        NSLog("OCR Results")
     }
 
 
