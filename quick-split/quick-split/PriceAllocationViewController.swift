@@ -220,6 +220,8 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
                 NSLog("OCR results are:");
                 NSLog("Raw ocr: %@", ocrRecognizerResult.parsedResultForName("Raw ocr"));
                 NSLog("Price: %@", ocrRecognizerResult.parsedResultForName("Price"));
+                
+                NSLog("Dimensions of ocrLayout are %@", NSStringFromCGRect(ocrRecognizerResult.ocrLayout().box));
             }
         }
     }

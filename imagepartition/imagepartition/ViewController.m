@@ -161,7 +161,7 @@
             _priceLabel.text = (price.length == 0) ? @"Unable to determine price." : reformattedPrice;
             
             PPOcrLayout* ocrLayout = [ocrRecognizerResult ocrLayout];
-//            NSLog(@"Dimensions of ocrLayout are %@", NSStringFromCGRect([ocrLayout box]));
+            NSLog(@"Dimensions of ocrLayout are %@", NSStringFromCGRect([ocrLayout box]));
         }
     };
     

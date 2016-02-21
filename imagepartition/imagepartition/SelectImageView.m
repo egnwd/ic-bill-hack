@@ -170,7 +170,7 @@
     
     CGFloat croppedHeight = end - start;
     
-    CGRect cropped = CGRectMake(minX, minY + start, maxX - minX, croppedHeight);
+    CGRect cropped = CGRectMake(minX, minY + start - 5, maxX - minX, croppedHeight + 10);
     
     // 4. Cleanup!
     CGColorSpaceRelease(colorSpace);
