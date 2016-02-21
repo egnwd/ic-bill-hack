@@ -21,6 +21,7 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
   var selectedFriend: FriendTotalCollectionViewCell?
   var dummyPrices: Dictionary<Int, FriendTotalCollectionViewCell?> = [95: nil, 45: nil, 160: nil, 1000: nil, 52136: nil]
   var selectionCount = 0
+  var coordinator:PPCoordinator?
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -28,6 +29,16 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
     
     // Set the delegate of the SelectImageView
     imageView.delegate = self
+    
+    let error : NSErrorPointer = nil
+    coordinator = self.coordinatorWithError(error)
+    
+    /** If scanning isn't supported, present an error */
+    if coordinator == nil {
+        let messageString: String = (error.memory?.localizedDescription) ?? ""
+        UIAlertView(title: "Warning", message: messageString, delegate: nil, cancelButtonTitle: "Ok").show()
+        return
+    }
     
   }
 
@@ -42,19 +53,8 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
     let ref:CGImageRef = CGImageCreateWithImageInRect(imageView.image?.CGImage, selection)!
     let croppedImage:UIImage = UIImage(CGImage: ref)
     displayImageView.image = croppedImage
-//    
-//    /** Instantiate the scanning coordinator */
-//    let error : NSErrorPointer = nil
-//    let coordinator:PPCoordinator?=self.coordinatorWithError(error)
-//    
-//    /** If scanning isn't supported, present an error */
-//    if coordinator == nil {
-//        let messageString: String = (error.memory?.localizedDescription) ?? ""
-//        UIAlertView(title: "Warning", message: messageString, delegate: nil, cancelButtonTitle: "Ok").show()
-//        return
-//    }
-//    
-//    coordinator!.processImage(croppedImage, scanningRegion: CGRectMake(0.0, 0.0, 1.0, 1.0), delegate: self)
+    
+    coordinator!.processImage(croppedImage, scanningRegion: CGRectMake(0.0, 0.0, 1.0, 1.0), delegate: self)
     
   }
   
@@ -209,12 +209,21 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
     
     func scanningViewControllerDidClose(scanningViewController: UIViewController) {
         // As scanning view controller is presented full screen and modally, dismiss it
-        self.dismissViewControllerAnimated(true, completion: nil)
+//        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func scanningViewController(scanningViewController: UIViewController!, didOutputResults results: [AnyObject]!) {
         NSLog("OCR Results")
+        for result in results {
+            if(result.isKindOfClass(PPOcrRecognizerResult)) {
+                let ocrRecognizerResult : PPOcrRecognizerResult = result as! PPOcrRecognizerResult
+                NSLog("OCR results are:");
+                NSLog("Raw ocr: %@", ocrRecognizerResult.parsedResultForName("Raw ocr"));
+                NSLog("Price: %@", ocrRecognizerResult.parsedResultForName("Price"));
+            }
+        }
     }
+    
 
 
 }
