@@ -1,4 +1,10 @@
 DinnerWith::Application.routes.draw do
+  get "request/create"
+
+  get "request/show"
+
+  get "request/pay"
+
   root :to => "home#index"
   get "request/:transaction_id", to: "request#show"
   post "request", to: "request#create"
