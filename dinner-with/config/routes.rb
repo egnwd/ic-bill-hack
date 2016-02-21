@@ -6,7 +6,7 @@ DinnerWith::Application.routes.draw do
   get "request/pay"
 
   root :to => "home#index"
-  get "request/:transaction_id", to: "request#show"
+  get "request/:mondo_id/:transaction_id", to: "request#show"
   post "request", to: "request#create"
-  get "request/:transaction_id/pay", to: "request#pay"
+  get "request/:mondo_id/:transaction_id/pay", to: "request#pay"
 end
