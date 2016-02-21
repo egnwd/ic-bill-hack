@@ -4571,3 +4571,855 @@ WARNING: Can't verify CSRF token authenticity
   [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
   Rendered text template (0.0ms)
 Completed 200 OK in 2.7ms (Views: 0.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/request/1/123" for 127.0.0.1 at 2016-02-21 08:23:49 +0000
+Processing by RequestController#show as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[35mRequest Load (0.7ms)[0m  SELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')
+  Rendered request/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18.3ms (Views: 14.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:23:49 +0000
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:23:49 +0000
+Served asset /request.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:23:49 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:23:49 +0000
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:23:49 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:23:49 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456043732434" for 127.0.0.1 at 2016-02-21 08:35:32 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (62ms)  (pid 40286)
+Served asset /request.css - 200 OK (96ms)
+
+
+Started GET "/assets/application.css?body=1&livereload=1456043758129" for 127.0.0.1 at 2016-02-21 08:35:58 +0000
+Compiled application.css  (1ms)  (pid 40286)
+Served asset /application.css - 200 OK (6ms)
+
+
+Started GET "/assets/application.css?body=1&livereload=1456043983825" for 127.0.0.1 at 2016-02-21 08:39:43 +0000
+Compiled application.css  (1ms)  (pid 40286)
+Served asset /application.css - 200 OK (6ms)
+
+
+Started GET "/request/1/123" for 127.0.0.1 at 2016-02-21 08:41:11 +0000
+Processing by RequestController#show as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[36mRequest Load (0.9ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')[0m
+  Rendered request/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 24.8ms (Views: 18.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:41:11 +0000
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:41:11 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:41:11 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:41:11 +0000
+Served asset /request.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:41:11 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:41:11 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/request/1/123" for 127.0.0.1 at 2016-02-21 08:41:30 +0000
+Processing by RequestController#show as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[35mRequest Load (0.5ms)[0m  SELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')
+  Rendered request/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 12.5ms (Views: 11.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:41:30 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:41:30 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:41:30 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:41:30 +0000
+Served asset /request.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:41:30 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:41:30 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/request/1/123" for 127.0.0.1 at 2016-02-21 08:41:31 +0000
+Processing by RequestController#show as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[36mRequest Load (0.5ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')[0m
+  Rendered request/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5.1ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:41:31 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:41:31 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:41:31 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:41:31 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:41:31 +0000
+Served asset /request.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:41:31 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044116690" for 127.0.0.1 at 2016-02-21 08:41:56 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (7ms)  (pid 40286)
+Served asset /request.css - 200 OK (12ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044128232" for 127.0.0.1 at 2016-02-21 08:42:08 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (2ms)  (pid 40286)
+Served asset /request.css - 200 OK (11ms)
+
+
+Started GET "/request/1/123" for 127.0.0.1 at 2016-02-21 08:42:48 +0000
+Processing by RequestController#show as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[35mRequest Load (0.5ms)[0m  SELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')
+  Rendered request/show.html.erb within layouts/application (0.5ms)
+Compiled application.css  (1ms)  (pid 40286)
+Completed 200 OK in 22.3ms (Views: 21.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:42:48 +0000
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:42:48 +0000
+Served asset /request.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:42:48 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:42:48 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:42:48 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:42:48 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1&livereload=1456044261950" for 127.0.0.1 at 2016-02-21 08:44:21 +0000
+Compiled application.css  (0ms)  (pid 40286)
+Served asset /application.css - 200 OK (7ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044285631" for 127.0.0.1 at 2016-02-21 08:44:45 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (2ms)  (pid 40286)
+Served asset /request.css - 200 OK (5ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044295163" for 127.0.0.1 at 2016-02-21 08:44:55 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (2ms)  (pid 40286)
+Served asset /request.css - 200 OK (5ms)
+
+
+Started GET "/request/1/123" for 127.0.0.1 at 2016-02-21 08:45:44 +0000
+Processing by RequestController#show as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[36mRequest Load (0.5ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')[0m
+  Rendered request/show.html.erb within layouts/application (24.5ms)
+Completed 500 Internal Server Error in 27.1ms
+
+ActionView::Template::Error (undefined method `price_format' for #<#<Class:0x00000101281570>:0x0000010880ae90>):
+    1: <div id = "wrapper">
+    2:   <h2>You have a new transaction request</h2>
+    3:   <p> <%= @request.who_from %> has requested a payment of
+    4:     <%= price_format(@request.amount) %> </p>
+    5:   <a class="button">Dispute it fam</a>
+    6:   <a class="button button-primary" href="http://localhost:3000/request/<%= @request.mondo_id %>/<%= @request.transaction_id%>/pay">Agree</a>
+    7: </div>
+  app/views/request/show.html.erb:4:in `_app_views_request_show_html_erb__3813369098077949557_2218806960'
+
+
+  Rendered /Users/elliotgreenwood/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/elliotgreenwood/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /Users/elliotgreenwood/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/request/1/123" for 127.0.0.1 at 2016-02-21 08:46:40 +0000
+Processing by RequestController#show as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[35mRequest Load (0.3ms)[0m  SELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')
+  Rendered request/show.html.erb within layouts/application (0.1ms)
+Compiled application.css  (0ms)  (pid 40286)
+Completed 200 OK in 41.9ms (Views: 31.1ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:46:40 +0000
+Served asset /application.css - 200 OK (11ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:46:40 +0000
+Served asset /application.js - 304 Not Modified (25ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:46:40 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:46:40 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:46:40 +0000
+Served asset /request.css - 200 OK (0ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:46:40 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/request/1/123" for 127.0.0.1 at 2016-02-21 08:46:48 +0000
+Processing by RequestController#show as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[36mRequest Load (0.3ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')[0m
+  Rendered request/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 12.9ms (Views: 4.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:46:48 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:46:48 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:46:48 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:46:48 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:46:48 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:46:48 +0000
+Served asset /request.css - 304 Not Modified (0ms)
+
+
+Started GET "/request/1/123" for 127.0.0.1 at 2016-02-21 08:47:07 +0000
+Processing by RequestController#show as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[35mRequest Load (0.4ms)[0m  SELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')
+  Rendered request/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6.5ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:47:07 +0000
+Served asset /request.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:47:07 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:47:07 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:47:07 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:47:07 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:47:07 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/request/1/123" for 127.0.0.1 at 2016-02-21 08:47:14 +0000
+Processing by RequestController#show as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[36mRequest Load (0.4ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')[0m
+  Rendered request/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 4.9ms (Views: 3.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:47:14 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:47:14 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:47:14 +0000
+Served asset /request.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:47:14 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:47:14 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:47:14 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/request/1/123" for 127.0.0.1 at 2016-02-21 08:47:35 +0000
+Processing by RequestController#show as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[35mRequest Load (0.4ms)[0m  SELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')
+  Rendered request/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 6.7ms (Views: 5.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:47:35 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:47:35 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:47:35 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:47:35 +0000
+Served asset /request.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:47:35 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:47:35 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044471698" for 127.0.0.1 at 2016-02-21 08:47:51 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (3ms)  (pid 40286)
+Served asset /request.css - 200 OK (7ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044475841" for 127.0.0.1 at 2016-02-21 08:47:55 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (3ms)  (pid 40286)
+Served asset /request.css - 200 OK (7ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044572668" for 127.0.0.1 at 2016-02-21 08:49:32 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (4ms)  (pid 40286)
+Served asset /request.css - 200 OK (8ms)
+
+
+Started GET "/request/1/123" for 127.0.0.1 at 2016-02-21 08:49:50 +0000
+Processing by RequestController#show as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[36mRequest Load (0.4ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')[0m
+  Rendered request/show.html.erb within layouts/application (0.1ms)
+Compiled application.css  (1ms)  (pid 40286)
+Completed 200 OK in 16.6ms (Views: 15.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:49:50 +0000
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:49:50 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:49:50 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:49:50 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:49:50 +0000
+Served asset /request.css - 200 OK (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:49:50 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044609133" for 127.0.0.1 at 2016-02-21 08:50:09 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (3ms)  (pid 40286)
+Served asset /request.css - 200 OK (6ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044612932" for 127.0.0.1 at 2016-02-21 08:50:12 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (3ms)  (pid 40286)
+Served asset /request.css - 200 OK (6ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044615432" for 127.0.0.1 at 2016-02-21 08:50:15 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (3ms)  (pid 40286)
+Served asset /request.css - 200 OK (6ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044619424" for 127.0.0.1 at 2016-02-21 08:50:19 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (3ms)  (pid 40286)
+Served asset /request.css - 200 OK (6ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044635665" for 127.0.0.1 at 2016-02-21 08:50:35 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (5ms)  (pid 40286)
+Served asset /request.css - 200 OK (9ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044639910" for 127.0.0.1 at 2016-02-21 08:50:39 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (5ms)  (pid 40286)
+Served asset /request.css - 200 OK (8ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044643719" for 127.0.0.1 at 2016-02-21 08:50:43 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (4ms)  (pid 40286)
+Served asset /request.css - 200 OK (9ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044652268" for 127.0.0.1 at 2016-02-21 08:50:52 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (4ms)  (pid 40286)
+Served asset /request.css - 200 OK (10ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044656752" for 127.0.0.1 at 2016-02-21 08:50:56 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (5ms)  (pid 40286)
+Served asset /request.css - 200 OK (9ms)
+
+
+Started GET "/assets/request.css?body=1&livereload=1456044660735" for 127.0.0.1 at 2016-02-21 08:51:00 +0000
+Warning. Error encountered while saving cache /Users/elliotgreenwood/Imperial/Year2/ICHack/ic-bill-hack/dinner-with/tmp/cache/sass/ba25e541c8d90acfed5ad5b32aa6b08889e87a4a/request.css.scssc: can't dump anonymous class #<Class:0x000001021e0188>
+
+Compiled request.css  (4ms)  (pid 40286)
+Served asset /request.css - 200 OK (7ms)
+
+
+Started GET "/request/1/123/pay" for 127.0.0.1 at 2016-02-21 08:52:18 +0000
+Processing by RequestController#pay as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[35mRequest Load (0.6ms)[0m  SELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')
+  Rendered request/pay.html.erb within layouts/application (0.8ms)
+Compiled application.css  (1ms)  (pid 40286)
+Completed 200 OK in 21.9ms (Views: 20.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:52:18 +0000
+Served asset /application.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:52:18 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:52:18 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:52:18 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:52:18 +0000
+Served asset /request.css - 200 OK (0ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:52:18 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/request/1/123/example.gif" for 127.0.0.1 at 2016-02-21 08:52:18 +0000
+
+ActionController::RoutingError (No route matches [GET] "/request/1/123/example.gif"):
+  actionpack (3.2.16) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.16) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.16) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.16) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.16) lib/rails/engine.rb:484:in `call'
+  railties (3.2.16) lib/rails/application.rb:231:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.16) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/elliotgreenwood/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/elliotgreenwood/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/elliotgreenwood/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/elliotgreenwood/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/request/1/123/pay" for 127.0.0.1 at 2016-02-21 08:52:42 +0000
+Processing by RequestController#pay as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[36mRequest Load (0.5ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')[0m
+  Rendered request/pay.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 6.5ms (Views: 5.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:52:42 +0000
+Served asset /request.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:52:42 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:52:42 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:52:42 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:52:42 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:52:42 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/request/1/123/example.gif" for 127.0.0.1 at 2016-02-21 08:52:42 +0000
+
+ActionController::RoutingError (No route matches [GET] "/request/1/123/example.gif"):
+  actionpack (3.2.16) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.16) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.16) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.16) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.16) lib/rails/engine.rb:484:in `call'
+  railties (3.2.16) lib/rails/application.rb:231:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.16) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/elliotgreenwood/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/elliotgreenwood/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/elliotgreenwood/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/elliotgreenwood/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/request/1/123/pay" for 127.0.0.1 at 2016-02-21 08:53:27 +0000
+Processing by RequestController#pay as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[35mRequest Load (0.5ms)[0m  SELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')
+  Rendered request/pay.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7.8ms (Views: 6.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:53:27 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:53:27 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:53:27 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:53:27 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:53:27 +0000
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:53:27 +0000
+Served asset /request.css - 304 Not Modified (0ms)
+
+
+Started GET "/request/1/123/example.gif" for 127.0.0.1 at 2016-02-21 08:53:28 +0000
+
+ActionController::RoutingError (No route matches [GET] "/request/1/123/example.gif"):
+  actionpack (3.2.16) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.16) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.16) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.16) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.16) lib/rails/engine.rb:484:in `call'
+  railties (3.2.16) lib/rails/application.rb:231:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.16) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/elliotgreenwood/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/elliotgreenwood/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/elliotgreenwood/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/elliotgreenwood/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/request/1/123/pay" for 127.0.0.1 at 2016-02-21 08:57:24 +0000
+Processing by RequestController#pay as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[36mRequest Load (0.6ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')[0m
+  Rendered request/pay.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 19.7ms (Views: 17.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:57:24 +0000
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:57:24 +0000
+Served asset /request.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:57:24 +0000
+Served asset /jquery_ujs.js - 200 OK (0ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:57:24 +0000
+Served asset /request.js - 200 OK (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:57:24 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:57:24 +0000
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/request/1/123/example.gif" for 127.0.0.1 at 2016-02-21 08:57:24 +0000
+
+ActionController::RoutingError (No route matches [GET] "/request/1/123/example.gif"):
+  actionpack (3.2.16) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.16) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.16) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.16) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.16) lib/rails/engine.rb:484:in `call'
+  railties (3.2.16) lib/rails/application.rb:231:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.16) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/elliotgreenwood/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/elliotgreenwood/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/elliotgreenwood/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/elliotgreenwood/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/request/1/123/" for 127.0.0.1 at 2016-02-21 08:57:25 +0000
+Processing by RequestController#show as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[35mRequest Load (0.6ms)[0m  SELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')
+  Rendered request/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 9.5ms (Views: 8.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:57:25 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:57:25 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:57:25 +0000
+Served asset /request.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:57:25 +0000
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:57:25 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:57:25 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/request/1/123/pay" for 127.0.0.1 at 2016-02-21 08:57:29 +0000
+Processing by RequestController#pay as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[36mRequest Load (0.4ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')[0m
+  Rendered request/pay.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 6.0ms (Views: 4.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 08:57:29 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 08:57:29 +0000
+Served asset /request.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 08:57:29 +0000
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 08:57:29 +0000
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 08:57:29 +0000
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 08:57:29 +0000
+Served asset /request.js - 304 Not Modified (0ms)
+
+
+Started GET "/request/1/123/example.gif" for 127.0.0.1 at 2016-02-21 08:57:29 +0000
+
+ActionController::RoutingError (No route matches [GET] "/request/1/123/example.gif"):
+  actionpack (3.2.16) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.16) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.16) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.16) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.16) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.16) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.16) lib/rails/engine.rb:484:in `call'
+  railties (3.2.16) lib/rails/application.rb:231:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.16) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/elliotgreenwood/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/elliotgreenwood/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/elliotgreenwood/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/elliotgreenwood/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
