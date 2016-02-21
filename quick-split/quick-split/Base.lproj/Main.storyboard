@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C27e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ssl-c5-qAa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15B38b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ssl-c5-qAa">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -157,7 +157,7 @@
                                         <rect key="frame" x="0.0" y="28" width="600" height="53"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R2R-iW-anH" id="3ks-CP-hah">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="52"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="52.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -207,18 +207,24 @@
                                     <outlet property="delegate" destination="8ka-uG-won" id="pWT-Xw-suP"/>
                                 </connections>
                             </collectionView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clare" translatesAutoresizingMaskIntoConstraints="NO" id="uI2-1e-DFn" customClass="SelectImageView">
+                                <rect key="frame" x="0.0" y="199" width="600" height="329"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="bRt-wL-Kbz" firstAttribute="centerX" secondItem="SVU-87-LV0" secondAttribute="centerX" id="2Lv-Rx-zHl"/>
                             <constraint firstItem="Fhp-75-iGP" firstAttribute="leading" secondItem="hYQ-JL-SF9" secondAttribute="leading" constant="-20" id="5nQ-ON-1Yr"/>
+                            <constraint firstItem="uI2-1e-DFn" firstAttribute="leading" secondItem="SVU-87-LV0" secondAttribute="leadingMargin" constant="-20" id="Adf-6O-E2x"/>
                             <constraint firstItem="Fhp-75-iGP" firstAttribute="trailing" secondItem="hYQ-JL-SF9" secondAttribute="trailing" constant="20" id="BCx-99-0g8"/>
                             <constraint firstItem="bRt-wL-Kbz" firstAttribute="top" secondItem="SVU-87-LV0" secondAttribute="top" id="Csv-Tj-GHC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uI2-1e-DFn" secondAttribute="trailing" constant="-20" id="J8M-St-SN8"/>
                             <constraint firstItem="UYN-1j-P66" firstAttribute="top" secondItem="bRt-wL-Kbz" secondAttribute="bottom" constant="8" id="P3s-KP-sea"/>
                             <constraint firstItem="bRt-wL-Kbz" firstAttribute="top" secondItem="SVU-87-LV0" secondAttribute="topMargin" constant="20" id="RR3-aj-gFD"/>
                             <constraint firstItem="hYQ-JL-SF9" firstAttribute="leading" secondItem="SVU-87-LV0" secondAttribute="leadingMargin" id="RwA-wL-ugZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UYN-1j-P66" secondAttribute="trailing" constant="-20" id="XAu-G6-15o"/>
+                            <constraint firstItem="uI2-1e-DFn" firstAttribute="top" secondItem="bRt-wL-Kbz" secondAttribute="bottom" constant="8" id="ZXG-L5-kj1"/>
                             <constraint firstItem="hYQ-JL-SF9" firstAttribute="bottom" secondItem="ccd-jl-NKB" secondAttribute="top" id="ZqA-Ty-HxQ"/>
                             <constraint firstItem="bRt-wL-Kbz" firstAttribute="leading" secondItem="SVU-87-LV0" secondAttribute="leadingMargin" constant="-20" id="afr-WN-ngF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bRt-wL-Kbz" secondAttribute="trailing" constant="-20" id="eAi-IL-GDd"/>
@@ -226,6 +232,7 @@
                             <constraint firstItem="Fhp-75-iGP" firstAttribute="top" secondItem="UYN-1j-P66" secondAttribute="bottom" constant="8" id="jd9-C6-1Pu"/>
                             <constraint firstItem="Fhp-75-iGP" firstAttribute="top" secondItem="hYQ-JL-SF9" secondAttribute="top" id="jqC-3G-Rjw"/>
                             <constraint firstItem="UYN-1j-P66" firstAttribute="centerX" secondItem="SVU-87-LV0" secondAttribute="centerX" id="qKP-Y3-Fds"/>
+                            <constraint firstItem="Fhp-75-iGP" firstAttribute="top" secondItem="uI2-1e-DFn" secondAttribute="bottom" constant="8" id="sdf-ze-iT2"/>
                             <constraint firstItem="hYQ-JL-SF9" firstAttribute="centerX" secondItem="bRt-wL-Kbz" secondAttribute="centerX" id="t0i-OR-Eou"/>
                             <constraint firstItem="Fhp-75-iGP" firstAttribute="bottom" secondItem="ccd-jl-NKB" secondAttribute="top" id="ucs-me-EFE"/>
                         </constraints>
@@ -291,4 +298,7 @@
             <point key="canvasLocation" x="-1173" y="-639"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clare" width="450" height="449"/>
+    </resources>
 </document>
