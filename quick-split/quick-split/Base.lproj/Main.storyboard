@@ -154,7 +154,7 @@
                                     <segue destination="Zog-KA-VpN" kind="show" identifier="goToConfirmation" id="8JU-JY-6W5"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UYN-1j-P66">
+                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UYN-1j-P66">
                                 <rect key="frame" x="0.0" y="148" width="600" height="380"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -190,7 +190,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendCell" id="L6c-7O-A4J" customClass="FriendTotalCollectionViewCell" customModule="quick_split" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="2.5" width="80" height="110"/>
+                                        <rect key="frame" x="20" y="3" width="80" height="110"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="80" height="110"/>
@@ -213,7 +213,7 @@
                                 </connections>
                             </collectionView>
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sainsbury" translatesAutoresizingMaskIntoConstraints="NO" id="uI2-1e-DFn" customClass="SelectImageView">
-                                <rect key="frame" x="0.0" y="145" width="288" height="383"/>
+                                <rect key="frame" x="156" y="145" width="288" height="383"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="uI2-1e-DFn" secondAttribute="height" multiplier="3:4" id="lqD-BG-eVe"/>
                                 </constraints>
@@ -232,6 +232,7 @@
                             <constraint firstItem="bRt-wL-Kbz" firstAttribute="top" secondItem="SVU-87-LV0" secondAttribute="topMargin" constant="25" id="RR3-aj-gFD"/>
                             <constraint firstItem="hYQ-JL-SF9" firstAttribute="leading" secondItem="SVU-87-LV0" secondAttribute="leadingMargin" id="RwA-wL-ugZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="UYN-1j-P66" secondAttribute="trailing" constant="-20" id="XAu-G6-15o"/>
+                            <constraint firstItem="uI2-1e-DFn" firstAttribute="centerX" secondItem="SVU-87-LV0" secondAttribute="centerX" id="Ybp-JD-Z6C"/>
                             <constraint firstItem="uI2-1e-DFn" firstAttribute="top" secondItem="bRt-wL-Kbz" secondAttribute="bottom" constant="5" id="ZXG-L5-kj1"/>
                             <constraint firstItem="hYQ-JL-SF9" firstAttribute="bottom" secondItem="ccd-jl-NKB" secondAttribute="top" id="ZqA-Ty-HxQ"/>
                             <constraint firstItem="bRt-wL-Kbz" firstAttribute="leading" secondItem="SVU-87-LV0" secondAttribute="leadingMargin" constant="-20" id="afr-WN-ngF"/>
@@ -247,6 +248,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Csv-Tj-GHC"/>
+                                <exclude reference="Adf-6O-E2x"/>
                             </mask>
                         </variation>
                         <connections>

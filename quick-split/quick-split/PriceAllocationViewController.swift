@@ -69,7 +69,7 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
     let highlight = UIView(frame: CGRectMake(x, y, width, height))
     highlight.alpha = 0.3
     NSLog(NSStringFromCGRect(selection))
-    highlight.backgroundColor=UIColor.greenColor()
+    highlight.backgroundColor = selectedFriend?.friend?.colour
     self.view.addSubview(highlight)
     
   }
@@ -233,9 +233,29 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
         for result in results {
             if(result.isKindOfClass(PPOcrRecognizerResult)) {
                 let ocrRecognizerResult : PPOcrRecognizerResult = result as! PPOcrRecognizerResult
-                NSLog("OCR results are:");
-                NSLog("Raw ocr: %@", ocrRecognizerResult.parsedResultForName("Raw ocr"));
-                NSLog("Price: %@", ocrRecognizerResult.parsedResultForName("Price"));
+                NSLog("OCR results are:")
+                NSLog("Raw ocr: %@", ocrRecognizerResult.parsedResultForName("Raw ocr"))
+                NSLog("Price: %@", ocrRecognizerResult.parsedResultForName("Price"))
+                
+                
+                if let priceTest = ocrRecognizerResult.parsedResultForName("Price") {
+                    
+                    if (priceTest.characters.count != 0) {
+                        let poundsPence = priceTest.componentsSeparatedByString(",")
+                        
+                        if (poundsPence.count != 0) {
+                            let pounds:Int? = Int(poundsPence[0])
+                            let pence:Int? = Int(poundsPence[1])
+                            
+                            if (pounds != nil && pence != nil) {
+                                let price = pence! + (pounds! * 100);
+                                selectedFriend?.total += price
+                            }
+                        }
+                    }
+                    
+                }
+
                 
                 NSLog("Dimensions of ocrLayout are %@", NSStringFromCGRect(ocrRecognizerResult.ocrLayout().box));
             }
