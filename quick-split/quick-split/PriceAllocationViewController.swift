@@ -65,7 +65,8 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
   }
   
   func getFriends() -> [FriendTotalCollectionViewCell] {
-    return friendCollectionView.visibleCells() as! [FriendTotalCollectionViewCell]
+    let cells = friendCollectionView.visibleCells() as! [FriendTotalCollectionViewCell]
+    return cells.filter({$0.total != 0})
   }
   
   // MARK: - Table View
