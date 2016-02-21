@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  mondo_id: MyString
+  transaction_id: MyString
+  amount: 1
+  who_from: MyString
+
+two:
+  mondo_id: MyString
+  transaction_id: MyString
+  amount: 1
+  who_from: MyString

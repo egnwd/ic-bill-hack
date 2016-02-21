@@ -12,10 +12,17 @@
 		05CCD6A71C789B20001B5893 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6A61C789B20001B5893 /* MasterViewController.swift */; };
 		05CCD6A91C789B20001B5893 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6A81C789B20001B5893 /* DetailViewController.swift */; };
 		05CCD6AC1C789B20001B5893 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CCD6AA1C789B20001B5893 /* Main.storyboard */; };
-		05CCD6AE1C789B20001B5893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CCD6AD1C789B20001B5893 /* Assets.xcassets */; };
 		05CCD6B11C789B20001B5893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05CCD6AF1C789B20001B5893 /* LaunchScreen.storyboard */; };
 		05CCD6BC1C789B20001B5893 /* quick_splitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6BB1C789B20001B5893 /* quick_splitTests.swift */; };
 		05CCD6C71C789B20001B5893 /* quick_splitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6C61C789B20001B5893 /* quick_splitUITests.swift */; };
+		05CCD6D81C78A771001B5893 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6D71C78A771001B5893 /* Friend.swift */; };
+		05CCD6DA1C78A8C1001B5893 /* DemoFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6D91C78A8C1001B5893 /* DemoFriends.swift */; };
+		05CCD6E01C78B1BE001B5893 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6DF1C78B1BE001B5893 /* FriendCollectionViewCell.swift */; };
+		05CCD6E21C78BCEB001B5893 /* FriendSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6E11C78BCEB001B5893 /* FriendSelectionViewController.swift */; };
+		05CCD6E41C78C8BE001B5893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05CCD6E31C78C8BE001B5893 /* Assets.xcassets */; };
+		05CCD6E81C78FCED001B5893 /* PriceAllocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6E71C78FCED001B5893 /* PriceAllocationViewController.swift */; };
+		05CCD6EA1C7900C1001B5893 /* FriendTotalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6E91C7900C1001B5893 /* FriendTotalCollectionViewCell.swift */; };
+		05CCD6EC1C7935ED001B5893 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6EB1C7935ED001B5893 /* ConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +49,6 @@
 		05CCD6A61C789B20001B5893 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		05CCD6A81C789B20001B5893 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		05CCD6AB1C789B20001B5893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		05CCD6AD1C789B20001B5893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05CCD6B01C789B20001B5893 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05CCD6B21C789B20001B5893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05CCD6B71C789B20001B5893 /* quick-splitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "quick-splitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +57,14 @@
 		05CCD6C21C789B20001B5893 /* quick-splitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "quick-splitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CCD6C61C789B20001B5893 /* quick_splitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quick_splitUITests.swift; sourceTree = "<group>"; };
 		05CCD6C81C789B20001B5893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05CCD6D71C78A771001B5893 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		05CCD6D91C78A8C1001B5893 /* DemoFriends.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoFriends.swift; sourceTree = "<group>"; };
+		05CCD6DF1C78B1BE001B5893 /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
+		05CCD6E11C78BCEB001B5893 /* FriendSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSelectionViewController.swift; sourceTree = "<group>"; };
+		05CCD6E31C78C8BE001B5893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05CCD6E71C78FCED001B5893 /* PriceAllocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceAllocationViewController.swift; sourceTree = "<group>"; };
+		05CCD6E91C7900C1001B5893 /* FriendTotalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTotalCollectionViewCell.swift; sourceTree = "<group>"; };
+		05CCD6EB1C7935ED001B5893 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,10 +119,17 @@
 				05CCD6A61C789B20001B5893 /* MasterViewController.swift */,
 				05CCD6A81C789B20001B5893 /* DetailViewController.swift */,
 				05CCD6AA1C789B20001B5893 /* Main.storyboard */,
-				05CCD6AD1C789B20001B5893 /* Assets.xcassets */,
 				05CCD6AF1C789B20001B5893 /* LaunchScreen.storyboard */,
+				05CCD6E31C78C8BE001B5893 /* Assets.xcassets */,
 				05CCD6B21C789B20001B5893 /* Info.plist */,
 				05CCD6A31C789B20001B5893 /* quick_split.xcdatamodeld */,
+				05CCD6D71C78A771001B5893 /* Friend.swift */,
+				05CCD6D91C78A8C1001B5893 /* DemoFriends.swift */,
+				05CCD6DF1C78B1BE001B5893 /* FriendCollectionViewCell.swift */,
+				05CCD6E91C7900C1001B5893 /* FriendTotalCollectionViewCell.swift */,
+				05CCD6E11C78BCEB001B5893 /* FriendSelectionViewController.swift */,
+				05CCD6E71C78FCED001B5893 /* PriceAllocationViewController.swift */,
+				05CCD6EB1C7935ED001B5893 /* ConfirmationViewController.swift */,
 			);
 			path = "quick-split";
 			sourceTree = "<group>";
@@ -239,7 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				05CCD6B11C789B20001B5893 /* LaunchScreen.storyboard in Resources */,
-				05CCD6AE1C789B20001B5893 /* Assets.xcassets in Resources */,
+				05CCD6E41C78C8BE001B5893 /* Assets.xcassets in Resources */,
 				05CCD6AC1C789B20001B5893 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,10 +286,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05CCD6DA1C78A8C1001B5893 /* DemoFriends.swift in Sources */,
 				05CCD6A51C789B20001B5893 /* quick_split.xcdatamodeld in Sources */,
 				05CCD6A21C789B20001B5893 /* AppDelegate.swift in Sources */,
+				05CCD6E21C78BCEB001B5893 /* FriendSelectionViewController.swift in Sources */,
+				05CCD6EC1C7935ED001B5893 /* ConfirmationViewController.swift in Sources */,
+				05CCD6E01C78B1BE001B5893 /* FriendCollectionViewCell.swift in Sources */,
+				05CCD6D81C78A771001B5893 /* Friend.swift in Sources */,
 				05CCD6A71C789B20001B5893 /* MasterViewController.swift in Sources */,
 				05CCD6A91C789B20001B5893 /* DetailViewController.swift in Sources */,
+				05CCD6E81C78FCED001B5893 /* PriceAllocationViewController.swift in Sources */,
+				05CCD6EA1C7900C1001B5893 /* FriendTotalCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +523,7 @@
 				05CCD6CD1C789B20001B5893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05CCD6CE1C789B20001B5893 /* Build configuration list for PBXNativeTarget "quick-splitTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +532,7 @@
 				05CCD6D01C789B20001B5893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		05CCD6D11C789B20001B5893 /* Build configuration list for PBXNativeTarget "quick-splitUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +541,7 @@
 				05CCD6D31C789B20001B5893 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
