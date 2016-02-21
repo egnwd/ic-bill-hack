@@ -15,6 +15,7 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
   @IBOutlet var nextButton: UIButton!
   @IBOutlet var pricesTable: UITableView!
   @IBOutlet weak var imageView: SelectImageView!
+  @IBOutlet var displayImageView: UIImageView!
     
   var friends: [Friend] = []
   var selectedFriend: FriendTotalCollectionViewCell?
@@ -22,6 +23,7 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
   var selectionCount = 0
 
   override func viewDidLoad() {
+    weak var selectionDisplayImageView: UIImageView!
     super.viewDidLoad()
     // Do any additional setup after loading the view.
     
@@ -40,11 +42,7 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
     NSLog("Selection made")
     let ref:CGImageRef = CGImageCreateWithImageInRect(imageView.image?.CGImage, selection)!
     let croppedImage:UIImage = UIImage(CGImage: ref)
-    nextButton.imageView?.image = croppedImage
-//    CGImageRef imageRef = CGImageCreateWithImageInRect([_image CGImage], selection)
-//    UIImage *partitionImage = [UIImage imageWithCGImage:imageRef];
-//    CGImageRelease(imageRef);
-    
+    displayImageView.image = croppedImage
   }
   
   // MARK: - Navigation

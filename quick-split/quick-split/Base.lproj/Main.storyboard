@@ -214,6 +214,10 @@
                                     <constraint firstAttribute="width" secondItem="uI2-1e-DFn" secondAttribute="height" multiplier="3:4" id="lqD-BG-eVe"/>
                                 </constraints>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sE5-jD-obb">
+                                <rect key="frame" x="12" y="7" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.36896306820000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -250,6 +254,7 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="displayImageView" destination="sE5-jD-obb" id="uxn-Mw-NCf"/>
                         <outlet property="friendCollectionView" destination="bRt-wL-Kbz" id="JrP-xt-dSf"/>
                         <outlet property="imageView" destination="uI2-1e-DFn" id="alT-0S-AMX"/>
                         <outlet property="instructions" destination="hYQ-JL-SF9" id="TpC-Oo-hqj"/>
