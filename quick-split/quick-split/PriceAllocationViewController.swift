@@ -56,6 +56,22 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
     
     coordinator!.processImage(croppedImage, scanningRegion: CGRectMake(0.0, 0.0, 1.0, 1.0), delegate: self)
     
+    // Colour it in...
+
+    let ratio = imageView.frame.size.width / (imageView.image?.size.width)!
+    
+    let width = selection.size.width * ratio
+    let height = selection.size.height * ratio
+    
+    let x = imageView.frame.origin.x + (selection.origin.x * ratio)
+    let y = imageView.frame.origin.y + (selection.origin.y * ratio)
+    
+    let highlight = UIView(frame: CGRectMake(x, y, width, height))
+    highlight.alpha = 0.3
+    NSLog(NSStringFromCGRect(selection))
+    highlight.backgroundColor=UIColor.greenColor()
+    self.view.addSubview(highlight)
+    
   }
   
   // MARK: - Navigation
