@@ -112,7 +112,7 @@
     
     // Find longest chain where there are no more than 5 consective empty rows
     
-#define MAX_ZERO 5
+    #define MAX_ZERO 5
     
     // The start and end of the maximum sequence
     int start = 0;
