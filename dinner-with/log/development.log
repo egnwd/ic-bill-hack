@@ -4230,3 +4230,234 @@ ActionView::MissingTemplate (Missing template request/show, application/show wit
 
 
   Rendered /Users/elliotgreenwood/.rvm/gems/ruby-2.1.1/gems/actionpack-3.2.16/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/request/1/123" for 127.0.0.1 at 2016-02-21 04:57:47 +0000
+Connecting to database specified by database.yml
+Processing by RequestController#show as HTML
+  Parameters: {"mondo_id"=>"1", "transaction_id"=>"123"}
+  [1m[36mRequest Load (1.0ms)[0m  [1mSELECT "requests".* FROM "requests" WHERE (mondo_id='1' AND transaction_id='123')[0m
+  Rendered request/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 54.5ms (Views: 17.9ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/assets/request.css?body=1" for 127.0.0.1 at 2016-02-21 04:57:47 +0000
+Served asset /request.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-02-21 04:57:47 +0000
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/request.js?body=1" for 127.0.0.1 at 2016-02-21 04:57:47 +0000
+Served asset /request.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-02-21 04:57:47 +0000
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-02-21 04:57:47 +0000
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-02-21 04:57:47 +0000
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 04:58:08 +0000
+Processing by RequestController#create as */*
+  Parameters: {"request"=>{"mondo_id"=>"1", "transaction_id"=>"124", "amount"=>"1234", "who_from"=>"Elliot"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (5.7ms)[0m  [1mINSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["amount", 1234], ["created_at", Sun, 21 Feb 2016 04:58:08 UTC +00:00], ["mondo_id", "1"], ["transaction_id", "124"], ["updated_at", Sun, 21 Feb 2016 04:58:08 UTC +00:00], ["who_from", "Elliot"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  Rendered text template (0.0ms)
+Completed 200 OK in 13.8ms (Views: 1.1ms | ActiveRecord: 6.9ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 05:24:02 +0000
+Processing by RequestController#create as */*
+  Parameters: {"{\"request"=>{"mondo_id"=>{"\":\"1\",\"request"=>{"transaction_id"=>{"\":\"2016-02-21 05:24:02  0000\",\"request"=>{"amount"=>{"\":1234,\"request"=>{"who_from"=>{"\":\"Jonathan\"}"=>nil}}}}}}}}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount", nil], ["created_at", Sun, 21 Feb 2016 05:24:02 UTC +00:00], ["mondo_id", nil], ["transaction_id", nil], ["updated_at", Sun, 21 Feb 2016 05:24:02 UTC +00:00], ["who_from", nil]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 16.0ms (Views: 1.9ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 05:25:25 +0000
+Processing by RequestController#create as */*
+  Parameters: {"{\"request"=>{"mondo_id"=>{"\":\"1\",\"request"=>{"transaction_id"=>{"\":\"2016-02-21 05:25:25  0000\",\"request"=>{"amount"=>{"\":1234,\"request"=>{"who_from"=>{"\":\"Jonathan\"}"=>nil}}}}}}}}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["amount", nil], ["created_at", Sun, 21 Feb 2016 05:25:25 UTC +00:00], ["mondo_id", nil], ["transaction_id", nil], ["updated_at", Sun, 21 Feb 2016 05:25:25 UTC +00:00], ["who_from", nil]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  Rendered text template (0.0ms)
+Completed 200 OK in 3.6ms (Views: 0.4ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 05:26:27 +0000
+Processing by RequestController#create as */*
+  Parameters: {"{\"request"=>{"mondo_id"=>{"\":\"1\",\"request"=>{"transaction_id"=>{"\":\"2016-02-21 05:26:27  0000\",\"request"=>{"amount"=>{"\":1234,\"request"=>{"who_from"=>{"\":\"Jonathan\"}"=>nil}}}}}}}}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount", nil], ["created_at", Sun, 21 Feb 2016 05:26:27 UTC +00:00], ["mondo_id", nil], ["transaction_id", nil], ["updated_at", Sun, 21 Feb 2016 05:26:27 UTC +00:00], ["who_from", nil]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 3.2ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 05:28:47 +0000
+Processing by RequestController#create as */*
+  Parameters: {"{\"request"=>{"mondo_id"=>{"\":\"1\",\"request"=>{"transaction_id"=>{"\":\"2016-02-21 05:28:47  0000\",\"request"=>{"amount"=>{"\":1234,\"request"=>{"who_from"=>{"\":\"Jonathan\"}"=>nil}}}}}}}}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["amount", nil], ["created_at", Sun, 21 Feb 2016 05:28:47 UTC +00:00], ["mondo_id", nil], ["transaction_id", nil], ["updated_at", Sun, 21 Feb 2016 05:28:47 UTC +00:00], ["who_from", nil]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  Rendered text template (0.0ms)
+Completed 200 OK in 2.9ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 05:37:49 +0000
+Processing by RequestController#create as */*
+  Parameters: {"{\"request"=>{"mondo_id"=>{"\":\"1\",\"request"=>{"transaction_id"=>{"\":\"2016-02-21 05:37:49  0000\",\"request"=>{"amount"=>{"\":1234,\"request"=>{"who_from"=>{"\":\"Jonathan\"}"=>nil}}}}}}}}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount", nil], ["created_at", Sun, 21 Feb 2016 05:37:49 UTC +00:00], ["mondo_id", nil], ["transaction_id", nil], ["updated_at", Sun, 21 Feb 2016 05:37:49 UTC +00:00], ["who_from", nil]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 3.5ms (Views: 0.3ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 05:39:35 +0000
+Processing by RequestController#create as */*
+  Parameters: {"{\"request"=>{"mondo_id"=>{"\":\"acc_6\",\"request"=>{"transaction_id"=>{"\":\"1456033175\",\"request"=>{"amount"=>{"\":95,\"request"=>{"who_from"=>{"\":\"Jonathan\"}"=>nil}}}}}}}}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["amount", nil], ["created_at", Sun, 21 Feb 2016 05:39:35 UTC +00:00], ["mondo_id", nil], ["transaction_id", nil], ["updated_at", Sun, 21 Feb 2016 05:39:35 UTC +00:00], ["who_from", nil]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered text template (0.0ms)
+Completed 200 OK in 2.7ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 05:39:35 +0000
+Processing by RequestController#create as */*
+  Parameters: {"{\"request"=>{"mondo_id"=>{"\":\"acc_3\",\"request"=>{"transaction_id"=>{"\":\"1456033175\",\"request"=>{"amount"=>{"\":1045,\"request"=>{"who_from"=>{"\":\"Jonathan\"}"=>nil}}}}}}}}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount", nil], ["created_at", Sun, 21 Feb 2016 05:39:35 UTC +00:00], ["mondo_id", nil], ["transaction_id", nil], ["updated_at", Sun, 21 Feb 2016 05:39:35 UTC +00:00], ["who_from", nil]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 2.8ms (Views: 0.3ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 05:43:11 +0000
+Processing by RequestController#create as */*
+  Parameters: {"{\"request\":{\"amount\":205,\"transaction_id\":\"1456033391\",\"who_from\":\"Jonathan\",\"mondo_id\":\"acc_6\"}}"=>nil}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["amount", nil], ["created_at", Sun, 21 Feb 2016 05:43:11 UTC +00:00], ["mondo_id", nil], ["transaction_id", nil], ["updated_at", Sun, 21 Feb 2016 05:43:11 UTC +00:00], ["who_from", nil]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  Rendered text template (0.0ms)
+Completed 200 OK in 2.9ms (Views: 0.4ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 05:43:11 +0000
+Processing by RequestController#create as */*
+  Parameters: {"{\"request\":{\"amount\":95,\"transaction_id\":\"1456033391\",\"who_from\":\"Jonathan\",\"mondo_id\":\"acc_1\"}}"=>nil}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount", nil], ["created_at", Sun, 21 Feb 2016 05:43:11 UTC +00:00], ["mondo_id", nil], ["transaction_id", nil], ["updated_at", Sun, 21 Feb 2016 05:43:11 UTC +00:00], ["who_from", nil]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 2.7ms (Views: 0.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 05:47:19 +0000
+Processing by RequestController#create as */*
+  Parameters: {"{\"request\":{\"amount\":205,\"transaction_id\":\"1456033639\",\"who_from\":\"Jonathan\",\"mondo_id\":\"acc_1\"}}"=>nil}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["amount", nil], ["created_at", Sun, 21 Feb 2016 05:47:19 UTC +00:00], ["mondo_id", nil], ["transaction_id", nil], ["updated_at", Sun, 21 Feb 2016 05:47:19 UTC +00:00], ["who_from", nil]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  Rendered text template (0.0ms)
+Completed 200 OK in 3.6ms (Views: 0.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 05:47:19 +0000
+Processing by RequestController#create as */*
+  Parameters: {"{\"request\":{\"amount\":1000,\"transaction_id\":\"1456033639\",\"who_from\":\"Jonathan\",\"mondo_id\":\"acc_10\"}}"=>nil}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount", nil], ["created_at", Sun, 21 Feb 2016 05:47:19 UTC +00:00], ["mondo_id", nil], ["transaction_id", nil], ["updated_at", Sun, 21 Feb 2016 05:47:19 UTC +00:00], ["who_from", nil]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 4.6ms (Views: 0.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 05:56:25 +0000
+Processing by RequestController#create as */*
+  Parameters: {"{\"request\""=>">{\"mondo_id\"=>\"\", \"transaction_id\"=>\"\", \"amount\"=>\"1000\", \"who_from\"=>\"\"}}"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (2.0ms)[0m  [1mINSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["amount", nil], ["created_at", Sun, 21 Feb 2016 05:56:25 UTC +00:00], ["mondo_id", nil], ["transaction_id", nil], ["updated_at", Sun, 21 Feb 2016 05:56:25 UTC +00:00], ["who_from", nil]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  Rendered text template (0.0ms)
+Completed 200 OK in 4.5ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 05:56:25 +0000
+Processing by RequestController#create as */*
+  Parameters: {"{\"request\""=>">{\"mondo_id\"=>\"\", \"transaction_id\"=>\"\", \"amount\"=>\"52181\", \"who_from\"=>\"\"}}"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount", nil], ["created_at", Sun, 21 Feb 2016 05:56:25 UTC +00:00], ["mondo_id", nil], ["transaction_id", nil], ["updated_at", Sun, 21 Feb 2016 05:56:25 UTC +00:00], ["who_from", nil]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 2.2ms (Views: 0.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 05:58:59 +0000
+Processing by RequestController#create as */*
+  Parameters: {"{\"request\""=>">{\"mondo_id\"=>\"acc_2\", \"transaction_id\"=>\"1456034339\", \"amount\"=>\"52136\", \"who_from\"=>\"Jonathan\"}}"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["amount", nil], ["created_at", Sun, 21 Feb 2016 05:58:59 UTC +00:00], ["mondo_id", nil], ["transaction_id", nil], ["updated_at", Sun, 21 Feb 2016 05:58:59 UTC +00:00], ["who_from", nil]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  Rendered text template (0.0ms)
+Completed 200 OK in 2.6ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 05:58:59 +0000
+Processing by RequestController#create as */*
+  Parameters: {"{\"request\""=>">{\"mondo_id\"=>\"acc_8\", \"transaction_id\"=>\"1456034339\", \"amount\"=>\"95\", \"who_from\"=>\"Jonathan\"}}"}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount", nil], ["created_at", Sun, 21 Feb 2016 05:58:59 UTC +00:00], ["mondo_id", nil], ["transaction_id", nil], ["updated_at", Sun, 21 Feb 2016 05:58:59 UTC +00:00], ["who_from", nil]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 2.8ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 06:02:21 +0000
+Processing by RequestController#create as */*
+  Parameters: {"request"=>{"mondo_id"=>"acc_1", "transaction_id"=>"1456034541", "amount"=>"160", "who_from"=>"Jonathan"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["amount", 160], ["created_at", Sun, 21 Feb 2016 06:02:21 UTC +00:00], ["mondo_id", "acc_1"], ["transaction_id", "1456034541"], ["updated_at", Sun, 21 Feb 2016 06:02:21 UTC +00:00], ["who_from", "Jonathan"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  Rendered text template (0.0ms)
+Completed 200 OK in 2.9ms (Views: 0.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/request" for 127.0.0.1 at 2016-02-21 06:02:21 +0000
+Processing by RequestController#create as */*
+  Parameters: {"request"=>{"mondo_id"=>"acc_8", "transaction_id"=>"1456034541", "amount"=>"1095", "who_from"=>"Jonathan"}}
+WARNING: Can't verify CSRF token authenticity
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "requests" ("amount", "created_at", "mondo_id", "transaction_id", "updated_at", "who_from") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["amount", 1095], ["created_at", Sun, 21 Feb 2016 06:02:21 UTC +00:00], ["mondo_id", "acc_8"], ["transaction_id", "1456034541"], ["updated_at", Sun, 21 Feb 2016 06:02:21 UTC +00:00], ["who_from", "Jonathan"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered text template (0.0ms)
+Completed 200 OK in 2.4ms (Views: 0.2ms | ActiveRecord: 0.9ms)

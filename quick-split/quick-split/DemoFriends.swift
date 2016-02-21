@@ -18,7 +18,7 @@ class DemoFriends {
     let bob = Friend(name: "Bob", pictureName: "bob.jpg", mondoId: "acc_2")
     let clare = Friend(name: "Clare", pictureName: "clare.jpg", mondoId: "acc_3")
     let david = Friend(name: "David", pictureName: "david.jpg", mondoId: "acc_4")
-    let elliot = Friend(name: "Elliot", pictureName: "elliot.jpg", mondoId: "acc_5")
+    let elliot = Friend(name: "Elliot", pictureName: "elliot.jpg", mondoId: "acc_000094cjbHqqTaBqC8CQMb")
     let fred = Friend(name: "Fred", pictureName: "fred.jpg", mondoId: "acc_6")
     let george = Friend(name: "George", pictureName: "george.jpg", mondoId: "acc_7")
     let harry = Friend(name: "Harry", pictureName: "harry.jpg", mondoId: "acc_8")

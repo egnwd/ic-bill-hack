@@ -11,32 +11,67 @@ import UIKit
 class ConfirmationViewController: UIViewController {
   
   var friends: [FriendTotalCollectionViewCell] = []
+  let host = Friend(name: "Jonathan", pictureName: "jonathan.jpg", mondoId: "0")
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    print(friends.count)
-    // Call api
-//    for (var i = 0; i < friends.count; i++) {
-//      let request = NSMutableURLRequest(URL: NSURL(string: "http://www.dinner-with-stealth-phoenix.com")!)
-//      
-//      let accountId = friends[i].friend?.mondoId)
-//      let type = "basic"
-//      let title = "OMG it worked fam"
-//      let imageUrl = "http://giphy.com/gifs/nyan-cat-sIIhZliB2McAo"
-//      let bodyColour = UIColor.redColor()
-//      
-//      let postString = "" //Concatenate all the stuffs
-    
+    let transactionId = String(Int(NSDate().timeIntervalSince1970))
+    for friendCell in friends {
+      pushTransactionToDinnerWith(friendCell.friend!, transactionId: transactionId, total: friendCell.total)
     }
-    
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
+  
+  func pushTransactionToMondo(mondo_id: String) {
+    let postEndpoint = "https://api.getmondo.co.uk/feed"
+    guard let url = NSURL(string: postEndpoint) else {
+      print("Error: cannot create url")
+      return
+    }
+    let urlRequest = NSMutableURLRequest(URL: url)
+    urlRequest.HTTPMethod = "POST"
+    let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+    let session = NSURLSession(configuration: config)
     
-
+    let bodyData = "account_id"
+    urlRequest.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
+    
+    let task = session.dataTaskWithRequest(urlRequest, completionHandler: makeTransaction)
+    task.resume()
+  }
+  
+  func pushTransactionToDinnerWith(friend: Friend, transactionId: String, total: Int) {
+    let postEndpoint = "http://localhost:3000/request"
+    guard let url = NSURL(string: postEndpoint) else {
+      print("Error: cannot create url")
+      return
+    }
+    let urlRequest = NSMutableURLRequest(URL: url)
+    urlRequest.HTTPMethod = "POST"
+    let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+    let session = NSURLSession(configuration: config)
+    
+    let bodyData = "request[mondo_id]=\(friend.mondoId)&request[transaction_id]=\(transactionId)&request[amount]=\(total)&request[who_from]=\(host.name)"
+    urlRequest.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
+    
+    let task = session.dataTaskWithRequest(urlRequest, completionHandler: makeTransaction)
+    task.resume()
+  }
+  
+  func makeTransaction(data: NSData?, response: NSURLResponse?, error: NSError?) -> Void {
+    guard error == nil else {
+      print("error calling POST on /request")
+      print(error)
+      return
+    }
+    print("Load success page")
+  }
+  
+  
   /*
   // MARK: - Navigation
 
