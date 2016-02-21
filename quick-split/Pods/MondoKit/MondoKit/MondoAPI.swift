@@ -557,6 +557,7 @@ extension MondoAPI {
       guard error == nil else { return }
       
     }
+    print(operation)
     
     optionallyRefreshAccessTokenAndAddOperation(operation)
   }

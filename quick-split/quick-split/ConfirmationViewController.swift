@@ -17,10 +17,10 @@ class ConfirmationViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationController!.navigationBar.hidden = true
-    let transactionId = String(Int(NSDate().timeIntervalSince1970))
+    let transactionId = String(Int(random()*100))
     for friendCell in friends {
       if (friendCell.friend?.mondoId == "acc_000094cjbHqqTaBqC8CQMb") {
-        pushTransactionToMondo((friendCell.friend?.mondoId)!, total: friendCell.total, transaction_id: transactionId)
+        pushTransactionToMondo((friendCell.friend?.name)!, total: friendCell.total, transaction_id: transactionId)
       }
       pushTransactionToDinnerWith(friendCell.friend!, transactionId: transactionId, total: friendCell.total)
     }
@@ -32,13 +32,16 @@ class ConfirmationViewController: UIViewController {
   }
   
   func pushTransactionToMondo(mondo_id: String, total: Int, transaction_id: String) {
+    print("http://dinner-with.herokuapp.com/request/\(mondo_id)/\(transaction_id)")
     if MondoAPI.instance.isAuthorized {
-      MondoAPI.instance.addFeedItemForAccount(mondo_id, url: "http://dinner-with-stealth-phoenix.com/request/\(mondo_id)/\(transaction_id)", title: "You have a new payment request", body: String(format: "£%d.%02d", arguments: [total / 100, total % 100]), image_url: "http://dinner-with-stealth-phoenix.com/assets/images/mondo_icon.png", completion: { (error) in print(error) })
+      print("yea")
+      MondoAPI.instance.addFeedItemForAccount(mondo_id, url: "http://dinner-with.herokuapp.com/request/\(mondo_id)/\(transaction_id)", title: "You have a new payment request", body: String(format: "£%d.%02d", arguments: [total / 100, total % 100]), image_url: "http://dinner-with.herokuapp.com/assets/images/mondo_icon.png", completion: { (error) in print("Hey \(error)") })
     } else {
       let oauthViewController = MondoAPI.instance.newAuthViewController() { (success, error) in
         if success {
           self.dismissViewControllerAnimated(true) {
-            MondoAPI.instance.addFeedItemForAccount(mondo_id, url: "http://dinner-with-stealth-phoenix.com/request/\(mondo_id)/\(transaction_id)", title: "You have a new payment request", body: String(format: "£%d.%02d", arguments: [total / 100, total % 100]), image_url: "http://dinner-with-stealth-phoenix.com/assets/images/mondo_icon.png", completion: { (error) in print(error) })
+            print("yea2")
+            MondoAPI.instance.addFeedItemForAccount(mondo_id, url: "http://dinner-with.herokuapp.com/request/\(mondo_id)/\(transaction_id)", title: "You have a new payment request", body: String(format: "£%d.%02d", arguments: [total / 100, total % 100]), image_url: "http://dinner-with.herokuapp.com/assets/images/mondo_icon.png", completion: { (error) in print(error) })
           }
         } else {
             print("Error")
@@ -49,7 +52,7 @@ class ConfirmationViewController: UIViewController {
   }
   
   func pushTransactionToDinnerWith(friend: Friend, transactionId: String, total: Int) {
-    let postEndpoint = "http://localhost:3000/request"
+    let postEndpoint = "http://dinner-with.herokuapp.com/request"
     guard let url = NSURL(string: postEndpoint) else {
       print("Error: cannot create url")
       return
@@ -59,7 +62,7 @@ class ConfirmationViewController: UIViewController {
     let config = NSURLSessionConfiguration.defaultSessionConfiguration()
     let session = NSURLSession(configuration: config)
     
-    let bodyData = "request[mondo_id]=\(friend.mondoId)&request[transaction_id]=\(transactionId)&request[amount]=\(total)&request[who_from]=\(host.name)"
+    let bodyData = "request[mondo_id]=\(friend.name)&request[transaction_id]=\(transactionId)&request[amount]=\(total)&request[who_from]=\(host.name)"
     urlRequest.HTTPBody = bodyData.dataUsingEncoding(NSUTF8StringEncoding)
     
     let task = session.dataTaskWithRequest(urlRequest, completionHandler: makeTransaction)
@@ -74,7 +77,6 @@ class ConfirmationViewController: UIViewController {
     }
     print("Load success page")
   }
-  
   
   /*
   // MARK: - Navigation
