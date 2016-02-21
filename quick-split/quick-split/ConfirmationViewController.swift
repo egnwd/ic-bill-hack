@@ -16,6 +16,19 @@ class ConfirmationViewController: UIViewController {
     super.viewDidLoad()
     print(friends.count)
     // Call api
+//    for (var i = 0; i < friends.count; i++) {
+//      let request = NSMutableURLRequest(URL: NSURL(string: "http://www.dinner-with-stealth-phoenix.com")!)
+//      
+//      let accountId = friends[i].friend?.mondoId)
+//      let type = "basic"
+//      let title = "OMG it worked fam"
+//      let imageUrl = "http://giphy.com/gifs/nyan-cat-sIIhZliB2McAo"
+//      let bodyColour = UIColor.redColor()
+//      
+//      let postString = "" //Concatenate all the stuffs
+    
+    }
+    
   }
 
   override func didReceiveMemoryWarning() {
