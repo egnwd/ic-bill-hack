@@ -250,6 +250,11 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
                             if (pounds != nil && pence != nil) {
                                 let price = pence! + (pounds! * 100);
                                 selectedFriend?.total += price
+                                
+                                selectionCount += 1
+                                friends.append(selectedFriend!.friend!)
+                                nextButton.hidden = false
+                                
                             }
                         }
                     }
