@@ -10,7 +10,7 @@
 
 // TODO: add padding to the delegate
 #define HORIZONTAL_PADDING 5 // Padding of 5 pts either side
-#define VERTICAL_PADDING 8 // Padding of 5 pts either side
+#define VERTICAL_PADDING 12 // Padding of 5 pts either side
 
 @interface SelectImageView()
 @property (nonatomic) NSMutableSet *points;
