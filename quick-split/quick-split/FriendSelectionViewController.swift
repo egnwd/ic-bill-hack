@@ -21,11 +21,11 @@ class FriendSelectionViewController: UIViewController, UICollectionViewDataSourc
   override func viewDidLoad() {
     super.viewDidLoad()
     friends = DemoFriends.getFriends()
-    let blue = UIColor.blueColor()
-    let red = UIColor.redColor()
-    let purple = UIColor.purpleColor()
-    let yellow = UIColor.yellowColor()
-    let green = UIColor.greenColor()
+    let blue = UIColor(red: 58/255, green: 203/255, blue: 250/255, alpha: 1)
+    let red = UIColor(red: 221/255, green: 55/255, blue: 34/255, alpha: 1)
+    let purple = UIColor(red: 192/255, green: 139/255, blue: 158/255, alpha: 1)
+    let yellow = UIColor(red: 254/255, green: 225/255, blue: 80/255, alpha: 1)
+    let green = UIColor(red: 147/255, green: 207/255, blue: 55/255, alpha: 1)
     colours = [blue, red, purple, yellow, green]
       
     // Do any additional setup after loading the view.

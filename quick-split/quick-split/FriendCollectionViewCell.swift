@@ -9,8 +9,8 @@
 import UIKit
 
 class FriendCollectionViewCell: UICollectionViewCell {
-  let cellSize = CGSize(width: 75, height: 82)
-  let defaultColour = UIColor.whiteColor()
+  let cellSize = CGSize(width: 75, height: 100)
+  let defaultColour = UIColor.clearColor()
 
   var name: UILabel = UILabel()
   var avatar: UIImageView = UIImageView()
@@ -24,10 +24,13 @@ class FriendCollectionViewCell: UICollectionViewCell {
   func populateWithFriend(friend: Friend) {
     self.friend = friend
     
-    let imageLength = 48
+    let imageLength = 64
     let imageX = (Int(cellSize.width) - imageLength) / 2
     avatar = UIImageView(frame: CGRect(x: imageX, y: 0, width: imageLength, height: imageLength))
     avatar.image = friend.picture
+    let lyr = avatar.layer
+    lyr.masksToBounds = true
+    lyr.cornerRadius = avatar.bounds.size.width / 2
     self.addSubview(avatar)
     
     name = UILabel(frame: CGRect(x: 0, y: imageLength+10, width: Int(cellSize.width), height: 24))
@@ -37,12 +40,13 @@ class FriendCollectionViewCell: UICollectionViewCell {
   }
   
   func highlightCell(withColour colour: UIColor) {
-    self.backgroundColor = colour
+    self.avatar.layer.borderWidth = 4
+    self.avatar.layer.borderColor = colour.CGColor
     friend!.colour = colour
   }
   
   func unhighlightCell() {
-    self.backgroundColor = defaultColour
+    self.avatar.layer.borderWidth = 0
     friend!.colour = defaultColour
   }
 }

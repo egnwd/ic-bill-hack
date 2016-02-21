@@ -9,8 +9,12 @@
 import UIKit
 
 class FriendTotalCollectionViewCell: UICollectionViewCell {
-  let cellSize = CGSize(width: 75, height: 110)
+  let cellSize = CGSize(width: 80, height: 110)
   let defaultColour = UIColor.whiteColor()
+  let defaultBorderWidth: CGFloat = 4.0
+  let maxBorderWidth: CGFloat = 6.0
+  
+  var indicator: UIView = UIView()
 
   var total: Int = 0 {
     didSet {
@@ -24,15 +28,20 @@ class FriendTotalCollectionViewCell: UICollectionViewCell {
 
   required init?(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
+    indicator.frame = CGRect(x: cellSize.width/8, y: -defaultBorderWidth, width: cellSize.width*3/4, height: defaultBorderWidth)
+    self.addSubview(indicator)
   }
   
   func populateWithFriend(friend: Friend) {
     self.friend = friend
     
-    let imageLength = 48
+    let imageLength = 64
     let imageX = (Int(cellSize.width) - imageLength) / 2
-    avatar = UIImageView(frame: CGRect(x: imageX, y: 0, width: imageLength, height: imageLength))
+    avatar = UIImageView(frame: CGRect(x: imageX, y: 10, width: imageLength, height: imageLength))
     avatar.image = friend.picture
+    let lyr = avatar.layer
+    lyr.masksToBounds = true
+    lyr.cornerRadius = avatar.bounds.size.width / 2
     self.addSubview(avatar)
     
     totalLabel = UILabel(frame: CGRect(x: 0, y: imageLength+10, width: Int(cellSize.width), height: 24))
@@ -44,23 +53,34 @@ class FriendTotalCollectionViewCell: UICollectionViewCell {
   }
   
   func highlightCell(withColour colour: UIColor) {
-    self.backgroundColor = colour
+    setBorderWidth(defaultBorderWidth)
+    self.avatar.layer.borderColor = colour.CGColor
+    self.indicator.backgroundColor = colour
     friend!.colour = colour
   }
   
   func unhighlightCell() {
-    self.backgroundColor = defaultColour
+    setBorderWidth(0)
     friend!.colour = defaultColour
   }
   
   func selectCell() {
-    self.totalLabel.textColor = UIColor.whiteColor()
-    self.isChosen = true
+    showIndicator(true)
   }
   
   func deselectCell() {
-    self.totalLabel.textColor = UIColor.blackColor()
-    self.isChosen = false
+    showIndicator(false)
+  }
+  
+  private func showIndicator(show: Bool) {
+    let amount = show ? defaultBorderWidth : -defaultBorderWidth
+    UIView.animateWithDuration(0.2, delay: 0, options: .CurveEaseOut, animations: {
+      self.indicator.frame.origin.y += amount
+    }, completion: nil)
+  }
+  
+  private func setBorderWidth(width: CGFloat) {
+    self.avatar.layer.borderWidth = width
   }
   
   private func priceFormat(price: Int) -> String {

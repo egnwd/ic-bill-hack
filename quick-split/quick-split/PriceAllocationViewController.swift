@@ -79,6 +79,8 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
     let price = Array(dummyPrices.keys)[indexPath.row]
     cell.textLabel?.backgroundColor = UIColor.clearColor()
     cell.textLabel?.text = String(format: "£%d.%02d", arguments: [price / 100, price % 100])
+    cell.textLabel?.textAlignment = .Right
+    cell.textLabel?.frame.origin.x = 375 - (cell.textLabel?.frame.width)!
     return cell
   }
   
@@ -93,7 +95,7 @@ class PriceAllocationViewController: UIViewController, UICollectionViewDataSourc
         selectionCount--
       }
     }
-    cell?.backgroundColor = selectedFriend!.backgroundColor
+    cell?.backgroundColor = selectedFriend!.friend?.colour
     dummyPrices[price] = selectedFriend!
     selectedFriend!.total += price
     selectionCount++

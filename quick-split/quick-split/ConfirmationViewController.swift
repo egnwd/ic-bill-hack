@@ -15,6 +15,7 @@ class ConfirmationViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.navigationController!.navigationBar.hidden = true
     let transactionId = String(Int(NSDate().timeIntervalSince1970))
     for friendCell in friends {
       pushTransactionToDinnerWith(friendCell.friend!, transactionId: transactionId, total: friendCell.total)
