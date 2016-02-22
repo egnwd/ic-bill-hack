@@ -1,0 +1,10 @@
+<div id = "wrapper">
+  <h2>You have a new transaction request</h2>
+  <p> <%= @request.who_from %> has requested a payment of
+    <%= price_format(@request.amount) %> </p>
+    <br>
+    <br>
+    <br>
+  <a class="button">Dispute it fam</a>   
+  <a class="button button-primary" href="http://localhost:3000/request/<%= @request.mondo_id %>/<%= @request.transaction_id%>/pay">Agree</a>
+</div>

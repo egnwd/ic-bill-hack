@@ -8,23 +8,34 @@
 
 import UIKit
 import CoreData
+import MondoKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDelegate {
 
   var window: UIWindow?
 
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
-    let splitViewController = self.window!.rootViewController as! UISplitViewController
-    let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
-    navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem()
-    splitViewController.delegate = self
-
-    let masterNavigationController = splitViewController.viewControllers[0] as! UINavigationController
-    let controller = masterNavigationController.topViewController as! MasterViewController
-    controller.managedObjectContext = self.managedObjectContext
+    let navigationController = self.window!.rootViewController as! UINavigationController
+    navigationController.delegate = self
+    
+    return setUpMondo()
+  }
+  
+  private func setUpMondo() -> Bool {
+    guard let mondoKeysPath = NSBundle.mainBundle().pathForResource("mondo", ofType: "plist"),
+      mondoKeys = NSDictionary(contentsOfFile: mondoKeysPath),
+      mondoClientId = mondoKeys["clientId"] as? String,
+      mondoClientSecret = mondoKeys["clientSecret"] as? String else {
+        
+        assertionFailure("MondoKeys.plist containing 'clientId' and 'clientSecret' required but not found in main bundle")
+        return false
+    }
+    
+    MondoAPI.instance.initialiseWithClientId(mondoClientId, clientSecret : mondoClientSecret)
+    
     return true
   }
 

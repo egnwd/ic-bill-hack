@@ -1,0 +1,26 @@
+PODS:
+  - Alamofire (3.2.0)
+  - KeychainAccess (2.3.3)
+  - MondoKit (0.2.1):
+    - Alamofire (~> 3.0)
+    - KeychainAccess
+    - SwiftyJSON (~> 2.3)
+    - SwiftyJSONDecodable (~> 0.1)
+  - PPBlinkOCR (1.1.1)
+  - SwiftyJSON (2.3.2)
+  - SwiftyJSONDecodable (0.1.2):
+    - SwiftyJSON (~> 2.3)
+
+DEPENDENCIES:
+  - MondoKit
+  - PPBlinkOCR (~> 1.1.1)
+
+SPEC CHECKSUMS:
+  Alamofire: 4da478599fccddff361205c8929333d7fe18dceb
+  KeychainAccess: 9b7e49e48277e329b1b3195e54697ed313d30acf
+  MondoKit: 5b751a1a7ff32fc0af68d37bdfdf3342beb7d581
+  PPBlinkOCR: 1a8fc652b5be9563c8c60f1d363a8dbd3f35c5dd
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  SwiftyJSONDecodable: eb799b6c9d8380d10c87b5edbc8b64e32c5e8e43
+
+COCOAPODS: 0.39.0

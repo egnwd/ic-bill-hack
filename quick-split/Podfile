@@ -1,0 +1,6 @@
+platform :ios, '9.2'
+use_frameworks!
+target 'quick-split' do
+  pod 'PPBlinkOCR', '~> 1.1.1'
+  pod 'MondoKit'
+end

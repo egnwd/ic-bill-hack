@@ -1,0 +1,24 @@
+// Place all the styles related to the request controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+
+#wrapper {
+  width: 335px;
+  padding: 20px;
+  text-align: center;
+}
+
+.button {
+  margin: 0 8px;
+}
+
+p {
+  font-size: 28px;
+}
+
+h2 {
+  text-align: center;
+  font-size: 38px;
+  font-family: "Montserrat", "Helvetica-Neue", sans-serif;
+}

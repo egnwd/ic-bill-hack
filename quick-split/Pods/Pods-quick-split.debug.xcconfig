@@ -1,0 +1,6 @@
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$(PODS_ROOT)/PPBlinkOCR/MicroBlink.embeddedframework"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/PPBlinkOCR"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/PPBlinkOCR"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"iconv" -framework "AVFoundation" -framework "AudioToolbox" -framework "CoreMedia" -framework "MicroBlink"
+PODS_ROOT = ${SRCROOT}/Pods

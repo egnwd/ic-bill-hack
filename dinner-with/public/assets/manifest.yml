@@ -1,0 +1,11 @@
+---
+mondo_coin.png: mondo_coin-13eeb21002e9923bcf1df7380d159bca.png
+mondo_coin/index.png: mondo_coin-13eeb21002e9923bcf1df7380d159bca.png
+rails.png: rails-4e271d0ddbc5b564b1301352baadbba1.png
+rails/index.png: rails-4e271d0ddbc5b564b1301352baadbba1.png
+application.js: application-1c86210fb14798cb4dfc19737fe8eec8.js
+application/index.js: application-1c86210fb14798cb4dfc19737fe8eec8.js
+application.css: application-30ab2700e6caedcfb3e101f24fd9e471.css
+application/index.css: application-30ab2700e6caedcfb3e101f24fd9e471.css
+jquery.min.map: jquery.min-c5a89be96c8d2def857e2657b2c155c0.map
+jquery/index.min.map: jquery.min-c5a89be96c8d2def857e2657b2c155c0.map
