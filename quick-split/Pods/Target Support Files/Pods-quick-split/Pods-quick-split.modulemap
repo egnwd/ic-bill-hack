@@ -1,0 +1,6 @@
+framework module Pods_quick_split {
+  umbrella header "Pods-quick-split-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -17,10 +17,10 @@ class ConfirmationViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationController!.navigationBar.hidden = true
-    let transactionId = String(Int(random()*100))
+    let transactionId = String(arc4random_uniform(1000)+1)
     for friendCell in friends {
       if (friendCell.friend?.mondoId == "acc_000094cjbHqqTaBqC8CQMb") {
-        pushTransactionToMondo((friendCell.friend?.name)!, total: friendCell.total, transaction_id: transactionId)
+        pushTransactionToMondo(friendCell.friend!, total: friendCell.total, transaction_id: transactionId)
       }
       pushTransactionToDinnerWith(friendCell.friend!, transactionId: transactionId, total: friendCell.total)
     }
@@ -31,17 +31,16 @@ class ConfirmationViewController: UIViewController {
     // Dispose of any resources that can be recreated.
   }
   
-  func pushTransactionToMondo(mondo_id: String, total: Int, transaction_id: String) {
-    print("http://dinner-with.herokuapp.com/request/\(mondo_id)/\(transaction_id)")
+  func pushTransactionToMondo(friend: Friend, total: Int, transaction_id: String) {
     if MondoAPI.instance.isAuthorized {
       print("yea")
-      MondoAPI.instance.addFeedItemForAccount(mondo_id, url: "http://dinner-with.herokuapp.com/request/\(mondo_id)/\(transaction_id)", title: "You have a new payment request", body: String(format: "£%d.%02d", arguments: [total / 100, total % 100]), image_url: "http://dinner-with.herokuapp.com/assets/images/mondo_icon.png", completion: { (error) in print("Hey \(error)") })
+      MondoAPI.instance.addFeedItemForAccount(friend.mondoId, url: "http://dinner-with.herokuapp.com/request/\(friend.name)/\(transaction_id)", title: "You have a new payment request", body: String(format: "£%d.%02d", arguments: [total / 100, total % 100]), image_url: "http://dinner-with.herokuapp.com/assets/mondo_coin.png", completion: { (error) in print("Error: \(error)") })
     } else {
       let oauthViewController = MondoAPI.instance.newAuthViewController() { (success, error) in
         if success {
           self.dismissViewControllerAnimated(true) {
             print("yea2")
-            MondoAPI.instance.addFeedItemForAccount(mondo_id, url: "http://dinner-with.herokuapp.com/request/\(mondo_id)/\(transaction_id)", title: "You have a new payment request", body: String(format: "£%d.%02d", arguments: [total / 100, total % 100]), image_url: "http://dinner-with.herokuapp.com/assets/images/mondo_icon.png", completion: { (error) in print(error) })
+            MondoAPI.instance.addFeedItemForAccount(friend.mondoId, url: "http://dinner-with.herokuapp.com/request/\(friend.name)/\(transaction_id)", title: "You have a new payment request", body: String(format: "£%d.%02d", arguments: [total / 100, total % 100]), image_url: "http://dinner-with.herokuapp.com/assets/mondo_coin.png", completion: { (error) in print(error) })
           }
         } else {
             print("Error")

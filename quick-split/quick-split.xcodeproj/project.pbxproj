@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		059229181C79C2C40013971D /* mondo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 059229171C79C2C40013971D /* mondo.plist */; };
+		05BE1D371C79ECC40002F4B3 /* SelectImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 05BE1D361C79ECC40002F4B3 /* SelectImageView.m */; };
+		05BE1D3F1C7A0B000002F4B3 /* (null) in Resources */ = {isa = PBXBuildFile; };
+		05BE1D401C7A0B000002F4B3 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		05CCD6A21C789B20001B5893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6A11C789B20001B5893 /* AppDelegate.swift */; };
 		05CCD6A51C789B20001B5893 /* quick_split.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6A31C789B20001B5893 /* quick_split.xcdatamodeld */; };
 		05CCD6A71C789B20001B5893 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6A61C789B20001B5893 /* MasterViewController.swift */; };
@@ -24,7 +27,7 @@
 		05CCD6E81C78FCED001B5893 /* PriceAllocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6E71C78FCED001B5893 /* PriceAllocationViewController.swift */; };
 		05CCD6EA1C7900C1001B5893 /* FriendTotalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6E91C7900C1001B5893 /* FriendTotalCollectionViewCell.swift */; };
 		05CCD6EC1C7935ED001B5893 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05CCD6EB1C7935ED001B5893 /* ConfirmationViewController.swift */; };
-		561A2B86392A4A95B280D392 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CA1EBB3D757ED54C631981E /* Pods.framework */; };
+		0E079A2CDBF6AA0B79DB6D91 /* Pods_quick_split.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A53ABB75890A75115A0226 /* Pods_quick_split.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 
 /* Begin PBXFileReference section */
 		059229171C79C2C40013971D /* mondo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = mondo.plist; sourceTree = "<group>"; };
+		05BE1D341C79ECC40002F4B3 /* quick-split-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "quick-split-Bridging-Header.h"; sourceTree = "<group>"; };
+		05BE1D351C79ECC40002F4B3 /* SelectImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectImageView.h; sourceTree = "<group>"; };
+		05BE1D361C79ECC40002F4B3 /* SelectImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectImageView.m; sourceTree = "<group>"; };
 		05CCD69E1C789B20001B5893 /* quick-split.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "quick-split.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05CCD6A11C789B20001B5893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		05CCD6A41C789B20001B5893 /* quick_split.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = quick_split.xcdatamodel; sourceTree = "<group>"; };
@@ -68,9 +74,9 @@
 		05CCD6E71C78FCED001B5893 /* PriceAllocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceAllocationViewController.swift; sourceTree = "<group>"; };
 		05CCD6E91C7900C1001B5893 /* FriendTotalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendTotalCollectionViewCell.swift; sourceTree = "<group>"; };
 		05CCD6EB1C7935ED001B5893 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
-		3548E27AE13F2818C3B60C0F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		4CA1EBB3D757ED54C631981E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4FAB406394EB7D48A6E177AF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		3C9700C1A60422A277EE84F6 /* Pods-quick-split.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quick-split.release.xcconfig"; path = "Pods/Target Support Files/Pods-quick-split/Pods-quick-split.release.xcconfig"; sourceTree = "<group>"; };
+		443F1F0562EF18303B7165F8 /* Pods-quick-split.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-quick-split.debug.xcconfig"; path = "Pods/Target Support Files/Pods-quick-split/Pods-quick-split.debug.xcconfig"; sourceTree = "<group>"; };
+		85A53ABB75890A75115A0226 /* Pods_quick_split.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_quick_split.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				561A2B86392A4A95B280D392 /* Pods.framework in Frameworks */,
+				0E079A2CDBF6AA0B79DB6D91 /* Pods_quick_split.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,12 +130,16 @@
 		05CCD6A01C789B20001B5893 /* quick-split */ = {
 			isa = PBXGroup;
 			children = (
+				05BE1D341C79ECC40002F4B3 /* quick-split-Bridging-Header.h */,
+				05BE1D351C79ECC40002F4B3 /* SelectImageView.h */,
+				05BE1D361C79ECC40002F4B3 /* SelectImageView.m */,
 				05CCD6A11C789B20001B5893 /* AppDelegate.swift */,
 				05CCD6A61C789B20001B5893 /* MasterViewController.swift */,
 				05CCD6A81C789B20001B5893 /* DetailViewController.swift */,
 				05CCD6AA1C789B20001B5893 /* Main.storyboard */,
 				05CCD6AF1C789B20001B5893 /* LaunchScreen.storyboard */,
 				05CCD6E31C78C8BE001B5893 /* Assets.xcassets */,
+				059229171C79C2C40013971D /* mondo.plist */,
 				05CCD6B21C789B20001B5893 /* Info.plist */,
 				05CCD6A31C789B20001B5893 /* quick_split.xcdatamodeld */,
 				05CCD6D71C78A771001B5893 /* Friend.swift */,
@@ -139,7 +149,6 @@
 				05CCD6E11C78BCEB001B5893 /* FriendSelectionViewController.swift */,
 				05CCD6E71C78FCED001B5893 /* PriceAllocationViewController.swift */,
 				05CCD6EB1C7935ED001B5893 /* ConfirmationViewController.swift */,
-				059229171C79C2C40013971D /* mondo.plist */,
 			);
 			path = "quick-split";
 			sourceTree = "<group>";
@@ -165,8 +174,8 @@
 		F74CA7A1BBD47C4DAC895658 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4FAB406394EB7D48A6E177AF /* Pods.debug.xcconfig */,
-				3548E27AE13F2818C3B60C0F /* Pods.release.xcconfig */,
+				443F1F0562EF18303B7165F8 /* Pods-quick-split.debug.xcconfig */,
+				3C9700C1A60422A277EE84F6 /* Pods-quick-split.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -174,7 +183,7 @@
 		F78D886A2205F5D6E41856BB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4CA1EBB3D757ED54C631981E /* Pods.framework */,
+				85A53ABB75890A75115A0226 /* Pods_quick_split.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -289,7 +298,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05BE1D3F1C7A0B000002F4B3 /* (null) in Resources */,
 				05CCD6B11C789B20001B5893 /* LaunchScreen.storyboard in Resources */,
+				05BE1D401C7A0B000002F4B3 /* (null) in Resources */,
 				05CCD6E41C78C8BE001B5893 /* Assets.xcassets in Resources */,
 				059229181C79C2C40013971D /* mondo.plist in Resources */,
 				05CCD6AC1C789B20001B5893 /* Main.storyboard in Resources */,
@@ -325,7 +336,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quick-split/Pods-quick-split-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		985A053520964A4BB0D6B3D4 /* Embed Pods Frameworks */ = {
@@ -340,7 +351,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-quick-split/Pods-quick-split-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AE67830D6BB63849D15782A8 /* Check Pods Manifest.lock */ = {
@@ -375,6 +386,7 @@
 				05CCD6A71C789B20001B5893 /* MasterViewController.swift in Sources */,
 				05CCD6A91C789B20001B5893 /* DetailViewController.swift in Sources */,
 				05CCD6E81C78FCED001B5893 /* PriceAllocationViewController.swift in Sources */,
+				05BE1D371C79ECC40002F4B3 /* SelectImageView.m in Sources */,
 				05CCD6EA1C7900C1001B5893 /* FriendTotalCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,9 +459,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: elliot.greenwood@me.com (VNZ2Q3FKV6)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -469,6 +482,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "75dcb673-531e-4bf0-bec5-972a0f143114";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -491,9 +505,10 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: elliot.greenwood@me.com (VNZ2Q3FKV6)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -506,6 +521,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				PROVISIONING_PROFILE = "75dcb673-531e-4bf0-bec5-972a0f143114";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -513,29 +530,44 @@
 		};
 		05CCD6CC1C789B20001B5893 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4FAB406394EB7D48A6E177AF /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 443F1F0562EF18303B7165F8 /* Pods-quick-split.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "quick-split/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "stealth-phoenix.quick-split";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "quick-split/quick-split-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		05CCD6CD1C789B20001B5893 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3548E27AE13F2818C3B60C0F /* Pods.release.xcconfig */;
+			baseConfigurationReference = 3C9700C1A60422A277EE84F6 /* Pods-quick-split.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "quick-split/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "stealth-phoenix.quick-split";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "quick-split/quick-split-Bridging-Header.h";
 			};
 			name = Release;
 		};
